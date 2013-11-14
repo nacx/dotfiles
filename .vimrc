@@ -25,26 +25,6 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 
-" Enable omnicompletion
-set ofu=syntaxcomplete#Complete
-set completeopt=longest,menuone 
-" Change the behaviour of the <Enter> key in popmenu
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Add the C-Space mapping to enable omnicompletion
-inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-\ "\<lt>C-n>" :
-\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-imap <C-@> <C-Space>
-
-" Move the cursor to the windows
-noremap <silent> <Leader>h :wincmd h<CR>
-noremap <silent> <Leader>j :wincmd j<CR>
-noremap <silent> <Leader>k :wincmd k<CR>
-noremap <silent> <Leader>l :wincmd l<CR>
-
-
 " ----------------------------------------------
 "  CUSTOMIZE VIEW
 " ----------------------------------------------
@@ -59,18 +39,6 @@ set number title ruler
 
 " Load custom filetypes
 so ~/.vim/customfiletypes.vim
-
-
-" ---------------------------------------------
-"  Filetypes
-" ---------------------------------------------
-" XML
-" Autoload files ended with .xml with the xmlheader 
-autocmd BufNewFile *.xml source ~/.vim/ftplugin/xml.vim
-
-" PYTHON
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd BufWritePost *.py call Flake8()
 
 " SPELL CHECK
 "
@@ -89,7 +57,6 @@ filetype plugin indent on
 
 " NerdTree Plugin
 map <F2> <ESC>:NERDTreeToggle<RETURN>
-nnoremap <silent><F3> :TlistToggle<RETURN>
 
 " Set NERDTree option customize
 let NERDTreeAutoCenter = 1
@@ -107,15 +74,6 @@ autocmd VimEnter *.java NERDTree
 "autocmd VimEnter *.c NERDTree
 autocmd VimEnter *.h NERDTree
 autocmd VimEnter *. wincmd p
-
-" let Tlist_Auto_Open = 1
-let Tlist_Auto_Update = 1
-let Tlist_Use_Right_Window = 1
-autocmd VimEnter *.java Tlist
-"autocmd VimEnter *.c Tlist
-autocmd VimEnter *.h Tlist
-autocmd VimEnter *.vim Tlist
-
 
 " Autoload changes in .vimrc
 autocmd BufWritePost .vimrc source $MYVIMRC
