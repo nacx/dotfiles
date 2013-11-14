@@ -55,7 +55,7 @@ set nospell
 " Enable filetype plugins
 filetype plugin indent on
 
-" NerdTree Plugin
+" Plugin key remaps
 map <F2> <ESC>:NERDTreeToggle<RETURN>
 nmap <F3> :TagbarToggle<CR>
 
@@ -71,10 +71,10 @@ let NERDTreeIgnore+=['.*\.out$']
 let NERDTreeIgnore+=['.*\.so$', '.*\.a$']
 let NERDTreeIgnore+=['.*\.pyc$']
 let NERDTreeIgnore+=['.*\.class$']
-autocmd VimEnter *.java NERDTree
-"autocmd VimEnter *.c NERDTree
-autocmd VimEnter *.h NERDTree
-autocmd VimEnter *. wincmd p
+
+" Filetype default plugins
+autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
+autocmd FileType c,cpp,h,java,python nested :TagbarOpen
 
 " Autoload changes in .vimrc
 autocmd BufWritePost .vimrc source $MYVIMRC
