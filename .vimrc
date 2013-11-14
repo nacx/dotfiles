@@ -57,6 +57,7 @@ filetype plugin indent on
 
 " NerdTree Plugin
 map <F2> <ESC>:NERDTreeToggle<RETURN>
+nmap <F3> :TagbarToggle<CR>
 
 " Set NERDTree option customize
 let NERDTreeAutoCenter = 1
