@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/tcomment"]
 	path = .vim/bundle/tcomment
 	url = git@github.com:tomtom/tcomment_vim.git
+[submodule ".vim/bundle/bufexplorer"]
+	path = .vim/bundle/bufexplorer
+	url = git@github.com:jlanzarotta/bufexplorer.git

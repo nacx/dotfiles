@@ -24,8 +24,9 @@ set t_Co=256
 colorscheme nacx
 
 " Plugin key remaps
-map <F2> <ESC>:NERDTreeToggle<RETURN>
+nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :TagbarToggle<CR>
+nmap <F4> :BufExplorerHorizontalSplit<CR>
 
 " NERDTree options
 let NERDTreeAutoCenter = 1
@@ -39,6 +40,9 @@ let NERDTreeIgnore+=['.*\.out$']
 let NERDTreeIgnore+=['.*\.so$', '.*\.a$']
 let NERDTreeIgnore+=['.*\.pyc$']
 let NERDTreeIgnore+=['.*\.class$']
+
+" Bufexplorer options
+let g:bufExplorerSplitBelow=1
 
 " Automatic commands
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
