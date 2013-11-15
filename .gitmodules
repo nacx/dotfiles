@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/xmledit"]
 	path = .vim/bundle/xmledit
 	url = git@github.com:sukima/xmledit.git
+[submodule ".vim/bundle/vim-autoclose"]
+	path = .vim/bundle/vim-autoclose
+	url = git@github.com:Townk/vim-autoclose.git
