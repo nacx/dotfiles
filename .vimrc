@@ -35,6 +35,9 @@ cnoremap <expr> bd (getcmdtype() == ':' ? 'Bclose' : 'bd')
 :noremap <silent> <C-Left> b
 :noremap <silent> <C-Right> w
 
+" :w!! sudo saves the file
+cmap w!! w !sudo tee % >/dev/null
+
 " NERDTree options
 let NERDTreeAutoCenter = 1
 let NERDTreeCaseSensitiveSort = 1
@@ -55,10 +58,22 @@ let g:bufExplorerSplitBelow=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_exclude_preview = 1
+let g:airline_left_sep = '▶'
+let g:airline_left_alt_sep = '»'
+let g:airline_right_sep = '◀'
+let g:airline_right_alt_sep = '«'
+let g:airline_linecolumn_prefix = '␤ '
+"let g:airline_linecolumn_prefix = '¶ '
+let g:airline_branch_prefix = '⎇ '
+let g:airline_paste_symbol = 'ρ'
+"let g:airline_paste_symbol = 'Þ'
+"let g:airline_paste_symbol = '∥'
 
 " Jedi-vim
 let g:jedi#popup_on_dot = 0
 let g:jedi#use_tabs_not_buffers = 0
+autocmd FileType python setlocal completeopt-=preview
 
 " Automatic commands
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
