@@ -23,10 +23,17 @@ sy on
 set t_Co=256
 colorscheme nacx
 
-" Plugin key remaps
+" Key remaps
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :TagbarToggle<CR>
 nmap <F4> :BufExplorerHorizontalSplit<CR>
+
+" GRB: use fancy buffer closing that doesn't close the split
+cnoremap <expr> bd (getcmdtype() == ':' ? 'Bclose' : 'bd')
+:nnoremap <silent> <S-Left> :bprevious<CR>
+:nnoremap <silent> <S-Right> :bnext<CR>
+:noremap <silent> <C-Left> b
+:noremap <silent> <C-Right> w
 
 " NERDTree options
 let NERDTreeAutoCenter = 1
@@ -43,6 +50,11 @@ let NERDTreeIgnore+=['.*\.class$']
 
 " Bufexplorer options
 let g:bufExplorerSplitBelow=1
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Automatic commands
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
