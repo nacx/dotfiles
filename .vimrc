@@ -56,6 +56,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
+" Jedi-vim
+let g:jedi#popup_on_dot = 0
+let g:jedi#use_tabs_not_buffers = 0
+
 " Automatic commands
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
 autocmd FileType c,cpp,h,java,python nested :TagbarOpen
