@@ -76,9 +76,6 @@ let g:jedi#popup_on_dot = 0
 let g:jedi#use_tabs_not_buffers = 0
 autocmd FileType python setlocal completeopt-=preview
 
-" Tmux integration
-autocmd VimEnter * silent !tmux set status off
-
 " Automatic commands
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
 autocmd FileType c,cpp,h,java,python nested :TagbarOpen
