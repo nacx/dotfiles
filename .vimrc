@@ -27,6 +27,7 @@ colorscheme nacx
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :TagbarToggle<CR>
 nmap <F4> :BufExplorerHorizontalSplit<CR>
+nmap <silent> <F5> :!tmux splitw -v -l 5<CR><CR>
 
 " GRB: use fancy buffer closing that doesn't close the split
 cnoremap <expr> bd (getcmdtype() == ':' ? 'Bclose' : 'bd')
@@ -74,6 +75,9 @@ let g:airline_paste_symbol = 'ρ'
 let g:jedi#popup_on_dot = 0
 let g:jedi#use_tabs_not_buffers = 0
 autocmd FileType python setlocal completeopt-=preview
+
+" Tmux integration
+autocmd VimEnter * silent !tmux set status off
 
 " Automatic commands
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
