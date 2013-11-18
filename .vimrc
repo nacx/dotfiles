@@ -76,6 +76,15 @@ let g:jedi#popup_on_dot = 0
 let g:jedi#use_tabs_not_buffers = 0
 autocmd FileType python setlocal completeopt-=preview
 
+" Tmux integration
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when xterm-keys is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+
 " Automatic commands
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
 autocmd FileType c,cpp,h,java,python nested :TagbarOpen
