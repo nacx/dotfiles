@@ -73,7 +73,6 @@ let g:airline_paste_symbol = 'ρ'
 " Jedi-vim
 let g:jedi#popup_on_dot = 0
 let g:jedi#use_tabs_not_buffers = 0
-autocmd FileType python setlocal completeopt-=preview
 
 " Tmux integration
 if &term =~ '^screen'
