@@ -46,15 +46,14 @@ There is no automatic way to install this, but only a few links need to be creat
     ln -s dotfiles/.vimrc
     ln -s dotfiles/.vim
 
-That will leave everything in place to run vim with all the plugins. In order to enable the terminal, you will have to open vim in a tmux session. This can be automated by adding teh following function to the *.barhrc* file, and call it to open vim:
+That will leave everything in place to run vim with all the plugins. In order to enable the terminal, you will have to open vim in a tmux session. This can be automated by adding teh following lines to the *.barhrc* file:
 
     # Open Vim with tmux
-    function v() {
-        tmux new -d -s vim "vim $*" \; attach
-    }
+    function vim_tmux() { tmux new -d "vim $*" \; attach; }
+    alias vim='vim_tmux'
 
-Usage
------
+Usage cheat sheet
+-----------------
 
 The following keys have been mapped by default:
 
@@ -63,3 +62,4 @@ The following keys have been mapped by default:
 * **F4**: Open a vertical split and show the list of existing buffers.
 * **F5**: Open a shell in a tmux split.
 * **Shift-Left/Right**: Change to the previous/next buffer.
+* **Ctrl-Space**: Open autocomplete popup (only in Python).

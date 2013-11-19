@@ -24,6 +24,5 @@ alias mvnci='mvn clean install'
 alias git-delete='for f in `git ls-files -d`; do git rm $f; done'
 
 # Open Vim with tmux
-function v() {
-    tmux new -d -s vim "vim $*" \; attach
-}
+function vim_tmux() { tmux new -d "vim $*" \; attach; }
+alias vim='vim_tmux'
