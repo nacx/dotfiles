@@ -30,7 +30,6 @@ nmap <F4> :BufExplorerHorizontalSplit<CR>
 nmap <silent> <F5> :!tmux splitw -v -l 5<CR><CR>
 
 " GRB: use fancy buffer closing that doesn't close the split
-cnoremap <expr> bd (getcmdtype() == ':' ? 'Bclose' : 'bd')
 :nnoremap <silent> <S-Left> :bprevious<CR>
 :nnoremap <silent> <S-Right> :bnext<CR>
 :noremap <silent> <C-Left> b
