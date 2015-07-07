@@ -26,3 +26,8 @@ alias git-delete='for f in `git ls-files -d`; do git rm $f; done'
 # Open Vim with tmux
 function vim_tmux() { tmux new -d "vim $*" \; attach; }
 alias vim='vim_tmux'
+
+# Set a tmux friendly terminal terminal
+if [[ "$TERM" == "xterm" ]]; then
+    TERM=xterm-256color
+fi
