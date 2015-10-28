@@ -85,6 +85,9 @@ endif
 " Close tmux when exiting vim
 autocmd VimLeave * silent !tmux killp -a
 
+" Custom file types
+au BufRead,BufNewFile *.md set filetype=markdown
+
 " Automatic commands
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
 autocmd FileType c,cpp,h,java,python nested :TagbarOpen

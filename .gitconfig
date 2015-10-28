@@ -4,6 +4,7 @@
 
 [core]
     editor = vim
+    autocrlf = input
 
 [color]
     status = auto
