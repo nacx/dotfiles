@@ -6,9 +6,6 @@ fi
 # Environment variables
 export PS1='\u@\h:\w $(__git_ps1 "(%s) ")\$ '
 
-# Ruby configuration
-eval "$(rbenv init -)"
-
 # Aliases
 alias cp='cp -i'
 alias mv='mv -i'
