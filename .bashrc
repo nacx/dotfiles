@@ -14,6 +14,9 @@ alias rm='rm -i'
 alias targ='tar xvzf'
 alias tarb='tar xvjf'
 
+alias sshi='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+alias scpi='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+
 alias ..='cd ..'
 alias p='ps aux | grep -i'
 
