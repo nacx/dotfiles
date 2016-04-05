@@ -1,6 +1,7 @@
 [user]
     name = Ignasi Barrera
     email = nacx@apache.org
+    signingkey = D959B94F
 
 [core]
     editor = vim
