@@ -17,6 +17,10 @@
 [alias]
     st = status
     ci = commit
+    cs = commit -S
+    ms = merge -S
+    cp = cherry-pick
+    cps = cherry-pick -S
     co = checkout
     pl = pull
     ps = push
