@@ -28,6 +28,9 @@
     br = branch
     lg = log --graph
 
+[gpg]
+    program = gpg2
+
 [apply]
     whitespace = nowarn
 
