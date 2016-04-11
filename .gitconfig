@@ -21,12 +21,14 @@
     ms = merge -S
     cp = cherry-pick
     cps = cherry-pick -S
+    rs = rebase -S
     co = checkout
     pl = pull
     ps = push
     pr = pull --rebase
     br = branch
     lg = log --graph
+    lgs = log --graph --show-signature
 
 [gpg]
     program = gpg2
