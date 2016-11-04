@@ -95,6 +95,9 @@ au BufRead,BufNewFile *.md set filetype=markdown
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
 autocmd FileType c,cpp,h,java,python nested :TagbarOpen
 
+" Two space indent in Ruby
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
 " Autoload changes in .vimrc
 autocmd BufWritePost .vimrc source $MYVIMRC
 
