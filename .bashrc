@@ -41,6 +41,18 @@ function tolatest() {
     git status
 }
 
+function git-withbr() {
+    # To allow proper input variable substitution we need to construct the string command this way.
+    # We want the input variable to be substituted *before* running the command, but all the git and
+    # other commands to be not substituted and run in each submodule
+    CMD='if [[ $(git branch --list '
+    CMD+=${1}
+    CMD+=') =~ '
+    CMD+=${1}
+    CMD+=' ]]; then echo $(basename $(pwd)); fi '
+    git submodule --quiet foreach "${CMD}"
+}
+
 # Open Vim with tmux
 function vim_tmux() { tmux new -d "vim $*" \; attach; }
 alias vim='vim_tmux'
