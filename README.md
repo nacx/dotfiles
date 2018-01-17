@@ -15,6 +15,7 @@ These are the used Vim plugins:
 * **vim-airline**: A fantastic status bar.
 * **vim-autoclose**: Automatically close code blocks, etc.
 * **vim-fugitive**: Git integration.
+* **vim-go**: Golang integration.
 * **vim-pathogen**: The plugin loader.
 * **vim-sensible**: Common defaults for the .vimrc.
 * **vim-signify**: Show the git stats when editing files.
@@ -27,6 +28,7 @@ In order to use the Vim plugins the following pieces have to be installed manual
 
 * tmux
 * Exuberant ctags >= 5.5
+* gotags
 
 Installation
 ------------
