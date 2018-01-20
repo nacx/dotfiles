@@ -8,7 +8,6 @@ These are my dotfiles to configure Git and Vim, combined with Tmux, to have a sp
 These are the used Vim plugins:
 
 * **bufexplorer**: Easily show the list of buffers and switch between them.
-* **jedi-vim**: Autocomplete for Python.
 * **nerdtree**: The file explorer.
 * **tagbar**: To show the structure of the files and easily jump to variables, methods, etc.
 * **tcomment**: Useful to comment/uncomment code.
@@ -28,7 +27,6 @@ In order to use the Vim plugins the following pieces have to be installed manual
 
 * tmux
 * Exuberant ctags >= 5.5
-* gotags
 
 Installation
 ------------
@@ -54,6 +52,13 @@ That will leave everything in place to run vim with all the plugins. In order to
     function vim_tmux() { tmux new -d "vim $*" \; attach; }
     alias vim='vim_tmux'
 
+Install Go commands
+-------------------
+
+Once you have everything configured, you can install all Go commands used by *vim-go* by entering Vim and running:
+
+    :GoInstallBinaries
+
 Usage cheat sheet
 -----------------
 
@@ -64,4 +69,3 @@ The following keys have been mapped by default:
 * **F4**: Open a vertical split and show the list of existing buffers.
 * **F5**: Open a shell in a tmux split.
 * **Shift-Left/Right**: Change to the previous/next buffer.
-* **Ctrl-Space**: Open autocomplete popup (only in Python).

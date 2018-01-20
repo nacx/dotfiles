@@ -72,10 +72,6 @@ let g:airline_symbols.paste = 'ρ'
 "let g:airline_paste_symbol = 'Þ'
 "let g:airline_paste_symbol = '∥'
 
-" Jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#use_tabs_not_buffers = 0
-
 " Tmux integration
 if &term =~ '^screen'
     " tmux will send xterm-style keys when xterm-keys is on
@@ -92,7 +88,7 @@ autocmd VimLeave * silent !tmux killp -a
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Automatic commands
-autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py NERDTree
+autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py,*.go NERDTree
 autocmd FileType c,cpp,h,java,python,go nested :TagbarOpen
 
 " Two space indent in Ruby
