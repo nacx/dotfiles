@@ -77,6 +77,9 @@ set pyxversion=3
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
 set completeopt+=noinsert
+if has("patch-7.4.314")
+    set shortmess+=c
+endif
 
 " Tmux integration
 if &term =~ '^screen'
