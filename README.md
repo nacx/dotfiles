@@ -38,6 +38,9 @@ Installation
 
 There is no automatic way to install this, but only a few links need to be created. You can install all the plugins and create the links as follows:
 
+    # Install Neovim python3 support
+    pip3 install neovim
+
     # Clone the repo
     git clone https://github.com/nacx/dotfiles.git
     cd doftiles

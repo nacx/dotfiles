@@ -76,6 +76,7 @@ let g:go_fmt_autosave=0
 set pyxversion=3
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
+set completeopt+=noinsert
 
 " Tmux integration
 if &term =~ '^screen'
