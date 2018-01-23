@@ -81,6 +81,10 @@ if has("patch-7.4.314")
     set shortmess+=c
 endif
 
+" CtrlP
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " Tmux integration
 if &term =~ '^screen'
     " tmux will send xterm-style keys when xterm-keys is on
