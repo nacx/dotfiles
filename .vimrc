@@ -35,6 +35,11 @@ nmap <silent> <F5> :!tmux splitw -v -l 5<CR><CR>
 :noremap <silent> <C-Left> b
 :noremap <silent> <C-Right> w
 
+" Replace strings in local or global scope
+" https://stackoverflow.com/a/597932/3540564
+:nnoremap gr gd[{V%:s/<C-R>///gc<Left><Left><Left>
+:nnoremap gR gD:s/<C-R>///gc<Left><Left><Left>
+
 " :w!! sudo saves the file
 cmap w!! w !sudo tee % >/dev/null
 
