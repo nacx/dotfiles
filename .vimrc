@@ -62,15 +62,20 @@ let g:airline_left_sep = '▶'
 let g:airline_left_alt_sep = '»'
 let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '«'
-let g:airline_symbols = {}
-"let g:airline_linecolumn_prefix = '␤ '
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 let g:airline_symbols.linenr = '␤ '
-"let g:airline_linecolumn_prefix = '¶ '
-"let g:airline_branch_prefix = '⎇ '
 let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.paste = 'ρ'
-"let g:airline_paste_symbol = 'Þ'
-"let g:airline_paste_symbol = '∥'
+
+" Vim-go
+let g:go_fmt_autosave=0
+
+" Deoplete (autocompletion)
+set pyxversion=3
+let g:deoplete#enable_at_startup = 1
+set completeopt-=preview
 
 " Tmux integration
 if &term =~ '^screen'

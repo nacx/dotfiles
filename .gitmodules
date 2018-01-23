@@ -34,3 +34,15 @@
 [submodule ".vim/bundle/vim-go"]
 	path = .vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundle/deoplete.nvim"]
+	path = .vim/bundle/deoplete.nvim
+	url = git@github.com:Shougo/deoplete.nvim.git
+[submodule ".vim/bundle/vim-hug-neovim-rpc"]
+	path = .vim/bundle/vim-hug-neovim-rpc
+	url = git@github.com:roxma/vim-hug-neovim-rpc.git
+[submodule ".vim/bundle/nvim-yarp"]
+	path = .vim/bundle/nvim-yarp
+	url = git@github.com:roxma/nvim-yarp.git
+[submodule ".vim/bundle/deoplete-go"]
+	path = .vim/bundle/deoplete-go
+	url = git@github.com:zchee/deoplete-go.git
