@@ -72,23 +72,23 @@ The following keys have been mapped by default:
 
 ## Current Vim plugins
 
-These are the used Vim plugins:
-
-* **bufexplorer**: Easily show the list of buffers and switch between them.
-* **ctrlp**: Rapid file navigation.
-* **deoplete**: Autocompletion support.
-* **deoplete-go**: Golang language support for deoplete.
-* **nerdtree**: The file explorer.
-* **nvim-yarp**: Neovim porting for Vim8. Used to enable Deoplete in plain Vim.
-* **tagbar**: To show the structure of the files and easily jump to variables, methods, etc.
-* **tcomment**: Useful to comment/uncomment code.
-* **vim-airline**: A fantastic status bar.
-* **vim-autoclose**: Automatically close code blocks, etc.
-* **vim-fugitive**: Git integration.
-* **vim-go**: Golang integration.
-* **vim-hug-neovim-rpc**: Compatibility layer for Neovim RPC client for Vim8.
-* **vim-pathogen**: The plugin loader.
-* **vim-sensible**: Common defaults for the .vimrc.
-* **vim-signify**: Show the git stats when editing files.
-* **xmledit**: Automatically close tags in xml files.
+| Plugin | Description |
+| ------ | ----------- |
+| [bufexplorer](https://github.com/jlanzarotta/bufexplorer) | Easily show the list of buffers and switch between them |
+| [ctrlp](https://github.com/ctrlpvim/ctrlp.vim) | Rapid file navigation |
+| [deoplete](https://github.com/scrooloose/nerdtree) | Autocompletion support |
+| [deoplete-go](https://github.com/zchee/deoplete-go) | Golang language support for deoplete |
+| [nerdtree](https://github.com/scrooloose/nerdtree) | The file explorer |
+| [nvim-yarp](https://github.com/roxma/nvim-yarp) | Neovim porting for Vim8. Used to enable Deoplete in plain Vim |
+| [tagbar](https://github.com/majutsushi/tagbar) | To show the structure of the files and easily jump to variables, methods, etc |
+| [tcomment](https://github.com/tomtom/tcomment_vim) | Useful to comment/uncomment code |
+| [vim-airline](https://github.com/vim-airline/vim-airline) | A fantastic status bar |
+| [vim-autoclose](https://github.com/Townk/vim-autoclose) | Automatically close code blocks, etc |
+| [vim-fugitive](https://github.com/tpope/vim-fugitive) | Git integration |
+| [vim-go](https://github.com/fatih/vim-go) | Golang integration |
+| [vim-hug-neovim-rpc](https://github.com/roxma/vim-hug-neovim-rpc) | Compatibility layer for Neovim RPC client for Vim8 |
+| [vim-pathogen](https://github.com/tpope/vim-pathogen)| The plugin loader |
+| [vim-sensible](https://github.com/tpope/vim-sensible) | Common defaults for the .vimrc |
+| [vim-signify](https://github.com/mhinz/vim-signify) | Show the git stats when editing files |
+| [xmledit](https://github.com/sukima/xmledit) | Automatically close tags in xml files |
 
