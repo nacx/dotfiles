@@ -109,6 +109,9 @@ au BufRead,BufNewFile *.md set filetype=markdown
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py,*.go NERDTree
 autocmd FileType c,cpp,h,java,python,go nested :TagbarOpen
 
+" QuickFix window always at the bottom
+autocmd FileType qf wincmd J
+
 " Two space indent in Ruby
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 

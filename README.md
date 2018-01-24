@@ -17,6 +17,7 @@ These are my dotfiles and Vim configuration to use this awesome editor as a full
 
 In order to use the Vim plugins the following pieces have to be installed manually:
 
+* GiT
 * tmux
 * Exuberant ctags >= 5.5
 * Python3 and its development libraries.
