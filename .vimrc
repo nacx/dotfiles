@@ -83,6 +83,7 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#disable_auto_complete = 1
 set completeopt-=preview
 set completeopt+=noinsert
+set completeopt+=longest,menuone
 if has("patch-7.4.314")
     set shortmess+=c
 endif
