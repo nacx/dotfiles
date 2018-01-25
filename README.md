@@ -17,7 +17,7 @@ These are my dotfiles and Vim configuration to use this awesome editor as a full
 
 In order to use the Vim plugins the following pieces have to be installed manually:
 
-* GiT
+* Git
 * tmux
 * Exuberant ctags >= 5.5
 * Python3 and its development libraries.
@@ -68,7 +68,7 @@ The following keys have been mapped by default:
 * **F4**: Open a vertical split and show the list of existing buffers.
 * **F5**: Open a shell in a tmux split.
 * **Shift-Left/Right**: Change to the previous/next buffer.
-* **\<Ctrl-x\>\<Ctrl-o\>**: In INSERT mode' opens the autocompletion popup.
+* **\<Ctrl-Space\>**: In INSERT mode' opens the autocompletion popup.
 * **\<Ctrl-p\>**: Opens the CtrlP file search window.
 
 ## Current Vim plugins

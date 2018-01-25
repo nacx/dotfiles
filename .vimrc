@@ -80,11 +80,21 @@ let g:go_fmt_autosave=0
 " Deoplete (autocompletion)
 set pyxversion=3
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#disable_auto_complete = 1
 set completeopt-=preview
 set completeopt+=noinsert
 if has("patch-7.4.314")
     set shortmess+=c
 endif
+
+" Map Ctrl+Space to autocomplete
+" https://coderwall.com/p/cl6cpq/vim-ctrl-space-omni-keyword-completion
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+            \ "\<lt>C-n>" :
+            \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+            \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+            \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
 
 " CtrlP
 let g:ctrlp_map = '<C-p>'
