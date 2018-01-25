@@ -88,6 +88,10 @@ if has("patch-7.4.314")
     set shortmess+=c
 endif
 
+" Enter just selects the item in the autocomplete menu
+" http://vim.wikia.com/wiki/VimTip1386
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 " Map Ctrl+Space to autocomplete
 " https://coderwall.com/p/cl6cpq/vim-ctrl-space-omni-keyword-completion
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
