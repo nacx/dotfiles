@@ -34,6 +34,12 @@ You can install all the plugins and create the links as follows:
     git clone https://github.com/nacx/dotfiles.git
     cd doftiles
 
+    # Create the symbolic links in your home
+    cd ~
+    ln -s dotfiles/.tmux.conf
+    ln -s dotfiles/.vimrc
+    ln -s dotfiles/.vim
+
     # Install the plugins
     git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
     vim +PluginInstall +qall
@@ -41,12 +47,6 @@ You can install all the plugins and create the links as follows:
     # The 'deoplete-go' plugin is platform dependent and needs to be compiled:
     cd .vim/bundle/deoplete-go
     make
-
-    # Create the symbolic links in your home
-    cd ~
-    ln -s dotfiles/.tmux.conf
-    ln -s dotfiles/.vimrc
-    ln -s dotfiles/.vim
 
 That will leave everything in place to run vim with all the plugins. In order to enable the terminal, you will have to open vim in a tmux session. This can be automated by adding teh following lines to the *.barhrc* file:
 
