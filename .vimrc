@@ -1,6 +1,26 @@
-" Load Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+" Load Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'zchee/deoplete-go'
+Plugin 'scrooloose/nerdtree'
+Plugin 'roxma/nvim-yarp'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-commentary'
+Plugin 'Townk/vim-autoclose'
+Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'tpope/vim-sensible'
+Plugin 'mhinz/vim-signify'
+Plugin 'sukima/xmledit'
+Plugin 'vim-airline/vim-airline'
+call vundle#end()
+filetype on
 
 " Use :help <option> to see the docs
 set expandtab
@@ -22,6 +42,7 @@ set nospell
 sy on
 set t_Co=256
 colorscheme nacx
+
 
 " Key remaps
 nmap <F2> :NERDTreeToggle<CR>

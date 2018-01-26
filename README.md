@@ -34,8 +34,9 @@ You can install all the plugins and create the links as follows:
     git clone https://github.com/nacx/dotfiles.git
     cd doftiles
 
-    # Clone the plugins
-    git submodule update --init
+    # Install the plugins
+    git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
+    vim +PluginInstall +qall
 
     # The 'deoplete-go' plugin is platform dependent and needs to be compiled:
     cd .vim/bundle/deoplete-go
@@ -77,18 +78,18 @@ The following keys have been mapped by default:
 | ------ | ----------- |
 | [bufexplorer](https://github.com/jlanzarotta/bufexplorer) | Easily show the list of buffers and switch between them |
 | [ctrlp](https://github.com/ctrlpvim/ctrlp.vim) | Rapid file navigation |
-| [deoplete](https://github.com/scrooloose/nerdtree) | Autocompletion support |
+| [deoplete](https://github.com/Shougo/deoplete.nvim) | Autocompletion support |
 | [deoplete-go](https://github.com/zchee/deoplete-go) | Golang language support for deoplete |
 | [nerdtree](https://github.com/scrooloose/nerdtree) | The file explorer |
 | [nvim-yarp](https://github.com/roxma/nvim-yarp) | Neovim porting for Vim8. Used to enable Deoplete in plain Vim |
 | [tagbar](https://github.com/majutsushi/tagbar) | To show the structure of the files and easily jump to variables, methods, etc |
-| [tcomment](https://github.com/tomtom/tcomment_vim) | Useful to comment/uncomment code |
+| [vim-commentary](https://github.com/tpope/vim-commentary) | Useful to comment/uncomment code |
 | [vim-airline](https://github.com/vim-airline/vim-airline) | A fantastic status bar |
 | [vim-autoclose](https://github.com/Townk/vim-autoclose) | Automatically close code blocks, etc |
 | [vim-fugitive](https://github.com/tpope/vim-fugitive) | Git integration |
 | [vim-go](https://github.com/fatih/vim-go) | Golang integration |
 | [vim-hug-neovim-rpc](https://github.com/roxma/vim-hug-neovim-rpc) | Compatibility layer for Neovim RPC client for Vim8 |
-| [vim-pathogen](https://github.com/tpope/vim-pathogen)| The plugin loader |
+| [vundle](https://github.com/VundleVim/Vundle)| The plugin loader |
 | [vim-sensible](https://github.com/tpope/vim-sensible) | Common defaults for the .vimrc |
 | [vim-signify](https://github.com/mhinz/vim-signify) | Show the git stats when editing files |
 | [xmledit](https://github.com/sukima/xmledit) | Automatically close tags in xml files |
