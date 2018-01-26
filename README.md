@@ -22,6 +22,10 @@ In order to use the Vim plugins the following pieces have to be installed manual
 * Exuberant ctags >= 5.5
 * Python3 and its development libraries.
 
+If you are using OSX, you will need to install Vim with [Homebrew](https://brew.sh/).
+Otherwise auto-completion will not work since the version of Vim that comes by default
+is not compiled with Python3 support.
+
 ## Installation
 
 There is no automatic way to install this, but only a few links need to be created.
