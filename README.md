@@ -68,7 +68,7 @@ The following keys have been mapped by default:
 * **F4**: Open a vertical split and show the list of existing buffers.
 * **F5**: Open a shell in a tmux split.
 * **Shift-Left/Right**: Change to the previous/next buffer.
-* **\<Ctrl-Space\>**: In INSERT mode' opens the autocompletion popup.
+* **\<Ctrl-Space\>**: In INSERT mode opens the autocompletion popup.
 * **\<Ctrl-p\>**: Opens the CtrlP file search window.
 
 ## Current Vim plugins
