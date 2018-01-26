@@ -43,14 +43,13 @@ sy on
 set t_Co=256
 colorscheme nacx
 
-
 " Key remaps
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :TagbarToggle<CR>
 nmap <F4> :BufExplorerHorizontalSplit<CR>
 nmap <silent> <F5> :!tmux splitw -v -l 5<CR><CR>
 
-" GRB: use fancy buffer closing that doesn't close the split
+" Use fancy buffer closing that doesn't close the split
 :nnoremap <silent> <S-Left> :bprevious<CR>
 :nnoremap <silent> <S-Right> :bnext<CR>
 :noremap <silent> <C-Left> b
@@ -140,6 +139,14 @@ autocmd VimLeave * silent !tmux killp -a
 
 " Custom file types
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" Better help navigation
+autocmd FileType help nnoremap <buffer> <CR> <C-]>
+autocmd FileType help nnoremap <buffer> <BS> <C-T>
+autocmd FileType help nnoremap <buffer> o /'\l\{2,\}'<CR>
+autocmd FileType help nnoremap <buffer> O ?'\l\{2,\}'<CR>
+autocmd FileType help nnoremap <buffer> s /\|\zs\S\+\ze\|<CR>
+autocmd FileType help nnoremap <buffer> S ?\|\zs\S\+\ze\|<CR>
 
 " Automatic commands
 autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py,*.go NERDTree
