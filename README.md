@@ -36,7 +36,7 @@ You can install all the plugins and create the links as follows:
 
     # Clone the repo
     git clone https://github.com/nacx/dotfiles.git
-    cd dotiles
+    cd dotfiles
 
     # Create the symbolic links in your home
     cd ~
