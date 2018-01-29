@@ -1,26 +1,29 @@
-" Load Vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'zchee/deoplete-go'
-Plugin 'scrooloose/nerdtree'
-Plugin 'roxma/nvim-yarp'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-commentary'
-Plugin 'Townk/vim-autoclose'
-Plugin 'tpope/vim-fugitive'
-Plugin 'fatih/vim-go'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'tpope/vim-sensible'
-Plugin 'mhinz/vim-signify'
-Plugin 'sukima/xmledit'
-Plugin 'vim-airline/vim-airline'
-call vundle#end()
-filetype on
+" Automatically install the plugin manager if missing
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Load plugins
+call plug#begin('~/.vim/plugged')
+Plug 'jlanzarotta/bufexplorer'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'zchee/deoplete-go', { 'do': 'make' }
+Plug 'scrooloose/nerdtree'
+Plug 'roxma/nvim-yarp'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-commentary'
+Plug 'Townk/vim-autoclose'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'tpope/vim-sensible'
+Plug 'mhinz/vim-signify'
+Plug 'sukima/xmledit'
+Plug 'vim-airline/vim-airline'
+call plug#end()
 
 " Use :help <option> to see the docs
 set expandtab
@@ -99,8 +102,7 @@ set pyxversion=3
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#disable_auto_complete = 1
 set completeopt-=preview
-set completeopt+=noinsert
-set completeopt+=longest,menuone
+set completeopt+=noinsert,longest,menuone
 if has("patch-7.4.314")
     set shortmess+=c
 endif

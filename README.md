@@ -18,9 +18,9 @@ These are my dotfiles and Vim configuration to use this awesome editor as a full
 In order to use the Vim plugins the following pieces have to be installed manually:
 
 * Git
-* tmux
 * Exuberant ctags >= 5.5
 * Python3 and its development libraries.
+* tmux (only if you are using the integrated terminal)
 
 If you are using OSX, you will need to install Vim with [Homebrew](https://brew.sh/).
 Otherwise auto-completion will not work since the version of Vim that comes by default
@@ -40,29 +40,24 @@ You can install all the plugins and create the links as follows:
 
     # Create the symbolic links in your home
     cd ~
-    ln -s dotfiles/.tmux.conf
     ln -s dotfiles/.vimrc
     ln -s dotfiles/.vim
 
-    # Install the plugins
-    git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
-    vim +PluginInstall +qall
+Once the links have been created you're done! All the plugins will be automatically installed the first time you open Vim.
 
-    # The 'deoplete-go' plugin is platform dependent and needs to be compiled:
-    cd .vim/bundle/deoplete-go
-    make
+## Integrated terminal
 
-That will leave everything in place to run vim with all the plugins. In order to enable the terminal, you will have to open vim in a tmux session. This can be automated by adding teh following lines to the *.barhrc* file:
+The integrated terminal you will need to install `tmux`. Once installed, you can use the provided `tmux` configuration by creating the corresponding symlink:
+
+    # Create the symbolic for the tmux configuration
+    cd ~
+    ln -s dotfiles/.tmux.conf
+
+In order to easily open Vim in a `tmux` session that allows you to open the console, add the following lines to the *.barhrc* file:
 
     # Open Vim with tmux
     function vim_tmux() { tmux new -d "vim $*" \; attach; }
     alias vim='vim_tmux'
-
-### Install Go commands
-
-Once you have everything configured, you can install all Go commands used by *vim-go* by entering Vim and running:
-
-    :GoInstallBinaries
 
 ## Vim usage cheat sheet
 
@@ -93,7 +88,6 @@ The following keys have been mapped by default:
 | [vim-fugitive](https://github.com/tpope/vim-fugitive) | Git integration |
 | [vim-go](https://github.com/fatih/vim-go) | Golang integration |
 | [vim-hug-neovim-rpc](https://github.com/roxma/vim-hug-neovim-rpc) | Compatibility layer for Neovim RPC client for Vim8 |
-| [vundle](https://github.com/VundleVim/Vundle)| The plugin loader |
 | [vim-sensible](https://github.com/tpope/vim-sensible) | Common defaults for the .vimrc |
 | [vim-signify](https://github.com/mhinz/vim-signify) | Show the git stats when editing files |
 | [xmledit](https://github.com/sukima/xmledit) | Automatically close tags in xml files |
