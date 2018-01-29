@@ -94,9 +94,6 @@ let g:airline_symbols.linenr = '␤ '
 let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.paste = 'ρ'
 
-" Vim-go
-let g:go_fmt_autosave=0
-
 " Deoplete (autocompletion)
 set pyxversion=3
 let g:deoplete#enable_at_startup = 1
