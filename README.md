@@ -19,8 +19,8 @@ In order to use the Vim plugins the following pieces have to be installed manual
 
 * Git
 * Exuberant ctags >= 5.5
-* Python3 and its development libraries.
-* tmux (only if you are using the integrated terminal)
+* Python3 and its development libraries
+* tmux *(only if you are using the integrated terminal)*
 
 If you are using OSX, you will need to install Vim with [Homebrew](https://brew.sh/).
 Otherwise auto-completion will not work since the version of Vim that comes by default
@@ -45,9 +45,10 @@ You can install all the plugins and create the links as follows:
 
 Once the links have been created you're done! All the plugins will be automatically installed the first time you open Vim.
 
-## Integrated terminal
+### Integrated terminal
 
-The integrated terminal you will need to install `tmux`. Once installed, you can use the provided `tmux` configuration by creating the corresponding symlink:
+If you want to use the integrated terminal `tmux` needs to be installed. You can use the provided `tmux`
+configuration by creating the corresponding symlink:
 
     # Create the symbolic for the tmux configuration
     cd ~
