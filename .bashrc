@@ -61,3 +61,6 @@ alias vim='vim_tmux'
 if [[ "$TERM" == "xterm" ]]; then
     TERM=xterm-256color
 fi
+
+# Easily change to Go package source directories (e.g. gocd .../policy)
+function gocd() { cd `go list -f '{{.Dir}}' $1`; }
