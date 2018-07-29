@@ -61,5 +61,10 @@
                 }
             }
         ]
+    },
+    "git.enableSmartCommit": true,
+    "go.liveErrors": {
+        "enabled": true,
+        "delay": 500
     }
 }
