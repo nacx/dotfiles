@@ -32,6 +32,7 @@
 
 [gpg]
     program = gpg
+    alt = foo
 
 [apply]
     whitespace = nowarn
