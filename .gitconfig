@@ -31,7 +31,7 @@
     lgs = log --graph --show-signature
 
 [gpg]
-    program = gpg2
+    program = gpg
 
 [apply]
     whitespace = nowarn
