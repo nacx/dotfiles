@@ -23,10 +23,8 @@ alias p='ps aux | grep -i'
 alias mvn='mvn -fae'
 alias mvncp='mvn clean package'
 alias mvnci='mvn clean install'
-alias mvnts='mvn clean install -Dtest.suite=single -Dit.suite=none'
-alias mvnis='mvn clean install -Dtest.suite=none -Dit.suite=single'
-alias mvnta='mvn clean install -Dtest.suite=all -Dit.suite=all'
-alias mvntn='mvn clean install -Dtest.suite=none -Dit.suite=none'
+
+alias k='kubectl'
 
 alias git-delete='for f in `git ls-files -d`; do git rm $f; done'
 
