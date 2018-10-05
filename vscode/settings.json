@@ -67,5 +67,6 @@
         "delay": 500
     },
     "window.zoomLevel": 0,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "go.goroot": "/usr/local/opt/go/libexec",
 }
