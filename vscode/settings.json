@@ -69,4 +69,5 @@
     "window.zoomLevel": 0,
     "breadcrumbs.enabled": true,
     "go.goroot": "/usr/local/opt/go/libexec",
+    "editor.suggest.localityBonus": true,
 }
