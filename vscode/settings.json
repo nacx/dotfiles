@@ -63,11 +63,12 @@
     },
     "git.enableSmartCommit": true,
     "go.liveErrors": {
-        "enabled": true,
+        "enabled": false,
         "delay": 500
     },
     "window.zoomLevel": 0,
     "breadcrumbs.enabled": true,
     "go.goroot": "/usr/local/opt/go/libexec",
     "editor.suggest.localityBonus": true,
+    "go.docsTool": "gogetdoc",
 }

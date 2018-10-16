@@ -17,6 +17,7 @@ These are my dotfiles and Vim configuration to use this awesome editor as a full
 
 In order to use the Vim plugins the following pieces have to be installed manually:
 
+* curl
 * Git
 * Exuberant ctags >= 5.5
 * Python3 and its development libraries
@@ -36,7 +37,6 @@ You can install all the plugins and create the links as follows:
 
     # Clone the repo
     git clone https://github.com/nacx/dotfiles.git
-    cd dotfiles
 
     # Create the symbolic links in your home
     cd ~
