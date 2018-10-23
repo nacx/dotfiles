@@ -18,6 +18,7 @@
     st = status
     ci = commit
     cs = commit -S
+    css = commit -S --signoff
     ms = merge -S
     cp = cherry-pick
     cps = cherry-pick -S

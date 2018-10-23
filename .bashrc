@@ -25,6 +25,7 @@ alias mvncp='mvn clean package'
 alias mvnci='mvn clean install'
 
 alias k='kubectl'
+alias tf='terraform'
 
 alias git-delete='for f in `git ls-files -d`; do git rm $f; done'
 

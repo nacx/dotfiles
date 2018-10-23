@@ -58,6 +58,14 @@
                 "settings": {
                     "foreground": "#CECCAF"
                 }
+            },
+            {
+                "scope": [
+                    "variable"
+                ],
+                "settings": {
+                    "foreground": "#e9e5ad"
+                }
             }
         ]
     },
