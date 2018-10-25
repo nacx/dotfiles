@@ -5,8 +5,10 @@ fi
 
 # Environment variables
 export PS1='\u@\h:\w $(__git_ps1 "(%s) ")\$ '
+export EDITOR=vim
 
 # Aliases
+alias ls='ls -G'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
