@@ -42,4 +42,7 @@
     #pretty=format:%h (%ad %an) %s
 
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
+
+[protocol]
+	version = 2

@@ -79,4 +79,5 @@
     "go.goroot": "/usr/local/opt/go/libexec",
     "editor.suggest.localityBonus": true,
     "go.docsTool": "gogetdoc",
+    "editor.multiCursorModifier": "alt",
 }
