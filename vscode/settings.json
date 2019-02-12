@@ -80,4 +80,5 @@
     "editor.suggest.localityBonus": true,
     "go.docsTool": "gogetdoc",
     "editor.multiCursorModifier": "alt",
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home",
 }

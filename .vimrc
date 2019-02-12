@@ -26,6 +26,7 @@ Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " Use :help <option> to see the docs
+set encoding=utf-8
 set expandtab
 set shiftwidth=4
 set softtabstop=4
