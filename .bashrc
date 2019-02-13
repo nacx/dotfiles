@@ -1,10 +1,10 @@
-# Git configuration
-if [ -f ~/.git-completion.sh ]; then
-    source ~/.git-completion.sh
-fi
+# Polyglot prompt
+POLYGLOT=$(dirname ${BASH_SOURCE[0]})/polyglot/polyglot.sh
+[[ -f ${POLYGLOT} ]] && source ${POLYGLOT}
+set -o vi
+#bind 'set show-mode-in-prompt off'
 
 # Environment variables
-export PS1='\u@\h:\w $(__git_ps1 "(%s) ")\$ '
 export EDITOR=vim
 
 # Aliases
@@ -26,8 +26,18 @@ alias mvn='mvn -fae'
 alias mvncp='mvn clean package'
 alias mvnci='mvn clean install'
 
-alias k='kubectl'
 alias tf='terraform'
+
+# Kubernetes
+KUBE_PS1=$(brew list -1 kube-ps1 | grep '.sh$')
+if [[ -f ${KUBE_PS1} ]]; then
+    source ${KUBE_PS1}
+    kubeoff
+fi
+export KUBECONFIG=$(find ~/.kube -name 'config-*' | tr '\n' ':')
+alias k='kubectl'
+alias kctx='kubectx'
+alias kns='kubens'
 
 alias git-delete='for f in `git ls-files -d`; do git rm $f; done'
 

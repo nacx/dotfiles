@@ -1,0 +1,3 @@
+[submodule "polyglot"]
+	path = polyglot
+	url = git@github.com:nacx/polyglot.git
