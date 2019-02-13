@@ -1,8 +1,7 @@
 # Polyglot prompt
 POLYGLOT=$(dirname ${BASH_SOURCE[0]})/polyglot/polyglot.sh
 [[ -f ${POLYGLOT} ]] && source ${POLYGLOT}
-set -o vi
-#bind 'set show-mode-in-prompt off'
+bind 'set show-mode-in-prompt off'
 
 # Environment variables
 export EDITOR=vim
