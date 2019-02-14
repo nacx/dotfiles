@@ -1,6 +1,19 @@
-# Polyglot prompt
-POLYGLOT=$(dirname ${BASH_SOURCE[0]})/polyglot/polyglot.sh
-[[ -f ${POLYGLOT} ]] && source ${POLYGLOT}
+# Kubernetes
+export KUBECONFIG=$(find ~/.kube -name 'config-*' | tr '\n' ':')
+KUBE_PS1=$(brew list -1 kube-ps1 | grep '.sh$')
+if [[ -f ${KUBE_PS1} ]]; then
+    source ${KUBE_PS1}
+    kubeoff
+    export KUBE_PS1_SYMBOL_ENABLE=true
+    export KUBE_PS1_CTX_COLOR=yellow
+fi
+
+# Polyglot prompt (needs to go after kube-ps1 is loaded)
+POLYGLOT=$(dirname ${BASH_SOURCE[0]})/polyglot
+if [[ -d ${POLYGLOT} ]]; then
+    source ${POLYGLOT}/polyglot.sh
+    source ${POLYGLOT}/addons/polyglot-kube-ps1.sh
+fi
 bind 'set show-mode-in-prompt off'
 
 # Environment variables
@@ -25,18 +38,10 @@ alias mvn='mvn -fae'
 alias mvncp='mvn clean package'
 alias mvnci='mvn clean install'
 
-alias tf='terraform'
-
-# Kubernetes
-KUBE_PS1=$(brew list -1 kube-ps1 | grep '.sh$')
-if [[ -f ${KUBE_PS1} ]]; then
-    source ${KUBE_PS1}
-    kubeoff
-fi
-export KUBECONFIG=$(find ~/.kube -name 'config-*' | tr '\n' ':')
 alias k='kubectl'
 alias kctx='kubectx'
 alias kns='kubens'
+alias tf='terraform'
 
 alias git-delete='for f in `git ls-files -d`; do git rm $f; done'
 
