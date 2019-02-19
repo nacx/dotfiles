@@ -1,3 +1,5 @@
+CWD=$(dirname ${BASH_SOURCE[0]})
+
 # Kubernetes
 export KUBECONFIG=$(find ~/.kube -name 'config-*' | tr '\n' ':')
 KUBE_PS1=$(brew list -1 kube-ps1 | grep '.sh$')
@@ -9,12 +11,14 @@ if [[ -f ${KUBE_PS1} ]]; then
 fi
 
 # Polyglot prompt (needs to go after kube-ps1 is loaded)
-POLYGLOT=$(dirname ${BASH_SOURCE[0]})/polyglot
-if [[ -d ${POLYGLOT} ]]; then
-    source ${POLYGLOT}/polyglot.sh
-    source ${POLYGLOT}/addons/polyglot-kube-ps1.sh
+if [[ -d ${CWD}/polyglot ]]; then
+    source ${CWD}/polyglot/polyglot.sh
+    source ${CWD}/polyglot/addons/polyglot-kube-ps1.sh
 fi
 bind 'set show-mode-in-prompt off'
+
+# Git completion
+source ${CWD}/.git-completion.sh
 
 # Environment variables
 export EDITOR=vim
@@ -79,3 +83,4 @@ fi
 
 # Easily change to Go package source directories (e.g. gocd .../policy)
 function gocd() { cd `go list -f '{{.Dir}}' $1`; }
+
