@@ -1,0 +1,6 @@
+[submodule "addons/polyglot"]
+	path = addons/polyglot
+	url = https://github.com/agkozak/polyglot.git
+[submodule "addons/polyglot-kube-ps1"]
+	path = addons/polyglot-kube-ps1
+	url = https://github.com/agkozak/polyglot-kube-ps1.git

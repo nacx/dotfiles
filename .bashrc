@@ -6,16 +6,20 @@ KUBE_PS1=$(brew list -1 kube-ps1 | grep '.sh$')
 if [[ -f ${KUBE_PS1} ]]; then
     source ${KUBE_PS1}
     kubeoff
-    export KUBE_PS1_SYMBOL_ENABLE=true
-    export KUBE_PS1_CTX_COLOR=yellow
 fi
 
 # Polyglot prompt (needs to go after kube-ps1 is loaded)
-if [[ -d ${CWD}/polyglot ]]; then
-    source ${CWD}/polyglot/polyglot.sh
-    source ${CWD}/polyglot/addons/polyglot-kube-ps1.sh
+POLYGLOT=${CWD}/addons/polyglot/polyglot.sh
+if [[ -f ${POLYGLOT} ]]; then
+    source ${POLYGLOT}
+    bind 'set show-mode-in-prompt off'
+
+    POLYGLOT_KUBE=${CWD}/addons/polyglot-kube-ps1/polyglot-kube-ps1.sh
+    [[ -f ${POLYGLOT_KUBE} ]] && source ${POLYGLOT_KUBE}
 fi
-bind 'set show-mode-in-prompt off'
+
+export KUBE_PS1_SYMBOL_ENABLE=true
+export KUBE_PS1_CTX_COLOR=yellow
 
 # Git completion
 source ${CWD}/.git-completion.sh
