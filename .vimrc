@@ -72,6 +72,7 @@ let NERDTreeAutoCenter = 1
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeHighlightCursorline = 1
 let NERDTreeMouseMode = 1
+"let NERDTreeDirArrows = 1
 let NERDTreeIgnore=['.*\.o$']
 let NERDTreeIgnore+=['.*\~$']
 let NERDTreeIgnore+=['.*\.out$']

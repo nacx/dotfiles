@@ -47,8 +47,11 @@ alias mvncp='mvn clean package'
 alias mvnci='mvn clean install'
 
 alias k='kubectl'
+alias ki='kubectl -n istio-system'
 alias kctx='kubectx'
 alias kns='kubens'
+alias mixl='kubectl -n istio-system logs $(kubectl -n istio-system get pods -lapp=policy -o jsonpath="{.items[0].metadata.name}") -c mixer -f'
+
 alias tf='terraform'
 
 alias git-delete='for f in `git ls-files -d`; do git rm $f; done'

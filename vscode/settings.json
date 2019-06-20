@@ -70,15 +70,27 @@
         ]
     },
     "git.enableSmartCommit": true,
+    "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true,
+    "editor.suggest.localityBonus": true,
+    "editor.multiCursorModifier": "alt",
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "go.docsTool": "gogetdoc",
+    "go.useLanguageServer": true,
+    "go.goroot": "/usr/local/opt/go/libexec",
+    "go.autocompleteUnimportedPackages": true,
+    "go.formatTool": "goimports",
+    "go.formatFlags": ["-local", "github.com/tetrateio/tetrate"],
     "go.liveErrors": {
         "enabled": false,
         "delay": 500
     },
-    "window.zoomLevel": 0,
-    "breadcrumbs.enabled": true,
-    "go.goroot": "/usr/local/opt/go/libexec",
-    "editor.suggest.localityBonus": true,
-    "go.docsTool": "gogetdoc",
-    "editor.multiCursorModifier": "alt",
-    "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home",
 }
