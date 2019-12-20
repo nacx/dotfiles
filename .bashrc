@@ -8,6 +8,16 @@ if [[ -f ${KUBE_PS1} ]]; then
     kubeoff
 fi
 
+source <(kubectl completion bash)
+if [[ $(type -t compopt) = "builtin" ]]; then
+    complete -o default -F __start_kubectl k
+else
+    complete -o default -o nospace -F __start_kubectl k
+fi
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 # Polyglot prompt (needs to go after kube-ps1 is loaded)
 POLYGLOT=${CWD}/addons/polyglot/polyglot.sh
 if [[ -f ${POLYGLOT} ]]; then

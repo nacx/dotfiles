@@ -83,7 +83,6 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "go.docsTool": "gogetdoc",
     "go.useLanguageServer": true,
     "go.goroot": "/usr/local/opt/go/libexec",
     "go.autocompleteUnimportedPackages": true,
@@ -92,5 +91,18 @@
     "go.liveErrors": {
         "enabled": false,
         "delay": 500
+    },
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "enabled": true,
+        "args": []
     },
 }
