@@ -83,7 +83,10 @@ In order to easily open Vim in a `tmux` session that allows you to open the cons
 
 ```bash
 # Open Vim with tmux
-function vim_tmux() { tmux new -d "vim $*" \; attach; }
+function vim_tmux() {
+    VIM_SESSION="vim-${RANDOM}"
+    tmux new -s ${VIM_SESSION} -d "VIM_SESSION=${VIM_SESSION} vim $*" \; attach;
+}
 alias vim='vim_tmux'
 ```
 
