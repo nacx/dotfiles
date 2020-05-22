@@ -66,6 +66,19 @@ ln -s dotfiles/.vimrc
 ln -s dotfiles/.vim
 ```
 
+### Upgrading Python with Homebrew
+
+When upgrading Python with Homebrew, you may encounter issues about some modules not being found by `pythonx`. This
+is because Homebrew is still linked to the old Python version. To fix this, check the Python version Vim depends
+on, and update the links as follows:
+
+```bash
+$ brew info vim | grep python
+Required: gettext, lua, perl, python@3.8, ruby
+
+$ brew link --overwrite python@3.8 --force
+```
+
 Once the links have been created you're done! All the plugins will be automatically installed the first time you open Vim.
 
 ### Integrated terminal
