@@ -1,9 +1,11 @@
 CWD=$(dirname ${BASH_SOURCE[0]})
 
 # Kubernetes
-export KUBECONFIG=$(find ~/.kube -name 'config-*' | tr '\n' ':')
-KUBE_PS1=$(brew list -1 kube-ps1 | grep '.sh$')
-if [[ -f ${KUBE_PS1} ]]; then
+KC=(~/.kube/config-*)
+IFS=: eval 'export KUBECONFIG=${KC[*]}'
+#KUBE_PS1=$(brew list -1 kube-ps1 | grep '.sh$')
+KUBE_PS1=/usr/local/share/kube-ps1.sh
+if [[ -r ${KUBE_PS1} ]]; then
     source ${KUBE_PS1}
     kubeoff
 fi
