@@ -68,6 +68,10 @@ alias tf='terraform'
 
 alias git-delete='for f in `git ls-files -d`; do git rm $f; done'
 
+function gitgomod() {
+    TZ=UTC git --no-pager show --quiet --abbrev=12 --date='format-local:%Y%m%d%H%M%S' --format="%cd-%h"
+}
+
 function tolatest() {
     git fetch origin
     git checkout ${1}

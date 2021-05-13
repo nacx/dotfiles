@@ -77,7 +77,7 @@
     "breadcrumbs.enabled": true,
     "editor.suggest.localityBonus": true,
     "editor.multiCursorModifier": "alt",
-    "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home",
+    "java.home": "~/.jenv/versions/1.8.0.211",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "files.exclude": {
