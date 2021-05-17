@@ -1,10 +1,12 @@
 CWD=$(dirname ${BASH_SOURCE[0]})
 
+BREW_PREFIX=$(brew --prefix)
+
 # Kubernetes
 KC=(~/.kube/config-*)
 IFS=: eval 'export KUBECONFIG=${KC[*]}'
 #KUBE_PS1=$(brew list -1 kube-ps1 | grep '.sh$')
-KUBE_PS1=/usr/local/share/kube-ps1.sh
+KUBE_PS1=${BREW_PREFIX}/share/kube-ps1.sh
 if [[ -r ${KUBE_PS1} ]]; then
     source ${KUBE_PS1}
     kubeoff
@@ -16,8 +18,8 @@ if [[ $(type -t compopt) = "builtin" ]]; then
 else
     complete -o default -o nospace -F __start_kubectl k
 fi
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+if [ -f ${BREW_PREFIX}/etc/bash_completion ]; then
+    . ${BREW_PREFIX}/etc/bash_completion
 fi
 
 # Polyglot prompt (needs to go after kube-ps1 is loaded)
