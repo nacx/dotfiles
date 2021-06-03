@@ -23,7 +23,7 @@ Plug 'tpope/vim-sensible'
 Plug 'mhinz/vim-signify'
 Plug 'sukima/xmledit'
 Plug 'vim-airline/vim-airline'
-Plug 'jnurmine/Zenburn'
+Plug 'jacoborus/tender.vim'
 call plug#end()
 
 " Use :help <option> to see the docs
@@ -46,10 +46,7 @@ set nospell
 " Color theme
 sy on
 set t_Co=256
-let g:zenburn_high_Contrast=1
-let g:zenburn_alternate_Visual=1
-let g:zenburn_disable_Label_underline = 1
-colorscheme zenburn
+colorscheme tender
 " Override the highlight color so it shows better in nerdtree with high
 " contrast
 hi CursorLine guibg=#444444 gui=bold ctermbg=237 cterm=none
