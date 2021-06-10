@@ -147,6 +147,7 @@ autocmd VimLeave * silent !tmux kill-session -t $VIM_SESSION
 
 " Custom file types
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
 " Better help navigation
 autocmd FileType help nnoremap <buffer> <CR> <C-]>
