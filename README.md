@@ -64,6 +64,7 @@ git clone https://github.com/nacx/dotfiles.git
 cd ~
 ln -s dotfiles/.vimrc
 ln -s dotfiles/.vim
+ln -s dotfiles/.ctags
 ```
 
 ### Upgrading Python with Homebrew
