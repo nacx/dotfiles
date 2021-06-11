@@ -55,7 +55,7 @@ hi CursorLine guibg=#444444 gui=bold ctermbg=237 cterm=none
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :TagbarToggle<CR>
 nmap <F4> :BufExplorerHorizontalSplit<CR>
-nmap <silent> <F5> :!tmux splitw -v -l 5<CR><CR>
+nmap <silent> <C-S-t> :!tmux splitw -v -l 5<CR><CR>
 nmap f :NERDTreeFind<CR>
 
 " Use fancy buffer closing that doesn't close the split
@@ -142,7 +142,19 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
 let g:go_doc_popup_window = 1
-:nnoremap doc :GoDoc<CR>
+:nnoremap gdoc :GoDoc<CR>
+:nnoremap gs :GoInfo<CR>
+:nnoremap gdb :GoDebugBreakpoint<CR>
+:nnoremap gdi :GoDebugStep<CR>
+:nnoremap gdn :GoDebugNext<CR>
+:nnoremap gdo :GoDebugStepOut<CR>
+:nnoremap gdr :GoDebugContinue<CR>
+let g:go_debug_windows = {
+    \ 'vars':       'leftabove 40vnew',
+    \ 'stack':      'botright 15new',
+    \ 'goroutines': 'leftabove vnew',
+    \ 'out':        'botright 5new',
+\ }
 
 " Tmux integration
 if &term =~ '^screen'
