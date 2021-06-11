@@ -111,17 +111,19 @@ The following keys have been mapped by default:
 | -------- | ----------- |
 | **F2** | Toggle NERDTree |
 | **F3** | Toggle Tagbar (it is opened by default in certain source ccode files) |
-| **F4** | Open a vertical split and show the list of existing buffers |
-| **<Ctrl-Shift-t>** | Open a shell in a tmux split |
+| **F4** | Open a shell in a tmux split |
 | **Shift-Left/Right** | Change to the previous/next buffer |
 | **\<Ctrl-Space\>** | In INSERT mode opens the autocompletion popup |
-| **\<Ctrl-p\>** | Opens the CtrlP file search window |
+| **sf** | Opens the FZF file search window |
+| **sb** | Opens the FZF buffer search window |
+| **st** | Opens the FZF tag search window |
+| **sc** | Opens the FZF commit search window |
 
-### Go shortcuts
+### Go custom commands
 
 The configuration comes with some Go shortcuts and additional customimzations to the Go debugger:
 
-| Shortcut | Description |
+| Commands | Description |
 | -------- | ----------- |
 | **gdoc** | Shows a popup with the GoDoc for the symbol under the cursor |
 | **gs** | Shows the signature of the method under the cursor in the status bar |

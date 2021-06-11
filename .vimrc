@@ -7,8 +7,6 @@ endif
 
 " Load plugins
 call plug#begin('~/.vim/plugged')
-Plug 'jlanzarotta/bufexplorer'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'scrooloose/nerdtree'
@@ -24,6 +22,8 @@ Plug 'mhinz/vim-signify'
 Plug 'sukima/xmledit'
 Plug 'vim-airline/vim-airline'
 Plug 'jacoborus/tender.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim' 
 call plug#end()
 
 " Use :help <option> to see the docs
@@ -54,8 +54,7 @@ hi CursorLine guibg=#444444 gui=bold ctermbg=237 cterm=none
 " Key remaps
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :TagbarToggle<CR>
-nmap <F4> :BufExplorerHorizontalSplit<CR>
-nmap <silent> <C-S-t> :!tmux splitw -v -l 5<CR><CR>
+nmap <silent> <F4> :!tmux splitw -v -l 5<CR><CR>
 nmap f :NERDTreeFind<CR>
 
 " Use fancy buffer closing that doesn't close the split
@@ -130,10 +129,12 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 imap <C-@> <C-Space>
 
 
-
-" CtrlP
-let g:ctrlp_map = '<C-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" FZF
+let g:fzf_layout = { 'down': '30%' }
+:nnoremap sf :Files<CR>
+:nnoremap sb :Buffers<CR>
+:nnoremap st :Tags<CR>
+:nnoremap sc :Commits<CR>
 
 " Go
 let g:go_highlight_fields = 1
