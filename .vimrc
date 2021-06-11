@@ -140,8 +140,14 @@ let g:gutentags_exclude_project_root = ['/usr/local', '/opt/homebrew']
 let ctags_cache = expand('~/.cache/vim/ctags/')
 let g:gutentags_cache_dir = ctags_cache
 function Ctags_project_file()
-    let l:project_ctags = gutentags#get_project_root(getcwd())
-    return strpart(substitute(l:project_ctags, "/", "-", "g"), 1) . '-tags'
+    let l:
+    try
+        let l:project_ctags = gutentags#get_project_root(getcwd())
+        let l:project_ctags = strpart(substitute(l:project_ctags, "/", "-", "g"), 1) . '-tags'
+    catch
+        let l:project_ctags = ''
+    endtry
+    return l:project_ctags
 endfunction
 :execute 'set tags=' . ctags_cache . Ctags_project_file()
 
