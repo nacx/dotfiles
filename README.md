@@ -112,8 +112,24 @@ The following keys have been mapped by default:
 | **F2** | Toggle NERDTree |
 | **F3** | Toggle Tagbar (it is opened by default in certain source ccode files) |
 | **F4** | Open a vertical split and show the list of existing buffers |
-| **F5** | Open a shell in a tmux split |
+| **<Ctrl-Shift-t>** | Open a shell in a tmux split |
 | **Shift-Left/Right** | Change to the previous/next buffer |
 | **\<Ctrl-Space\>** | In INSERT mode opens the autocompletion popup |
 | **\<Ctrl-p\>** | Opens the CtrlP file search window |
+
+### Go shortcuts
+
+The configuration comes with some Go shortcuts and additional customimzations to the Go debugger:
+
+| Shortcut | Description |
+| -------- | ----------- |
+| **gdoc** | Shows a popup with the GoDoc for the symbol under the cursor |
+| **gs** | Shows the signature of the method under the cursor in the status bar |
+| **gdb** | Toggle a breakpoint in the current line |
+| **gdr** | Run the program while debugging until the next breakpoint |
+| **gdn** | Advance to the enxt line when debugging |
+| **gdi** | Step into the current function |
+| **gdo** | Step out of the current function |
+
+<a href="https://github.com/nacx/dotfiles/raw/master/img/godebug.png"><img src="https://github.com/nacx/dotfiles/raw/master/img/godebug.png" height="400"/></a>
 
