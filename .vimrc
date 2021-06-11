@@ -23,7 +23,8 @@ Plug 'sukima/xmledit'
 Plug 'vim-airline/vim-airline'
 Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim' 
+Plug 'junegunn/fzf.vim'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 " Use :help <option> to see the docs
@@ -128,6 +129,20 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
             \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
 
+" Gutentag
+let g:gutentags_add_default_project_roots = 0
+let g:gutentags_project_root = ['package.json', '.git', 'go.mod']
+let g:gutentags_modules = ['ctags']
+let g:gutentags_project_root_finder = ''
+let g:gutentags_add_ctrlp_root_markers = 0
+let g:gutentags_exclude_project_root = ['/usr/local', '/opt/homebrew']
+let ctags_cache = expand('~/.cache/vim/ctags/')
+let g:gutentags_cache_dir = ctags_cache
+function Ctags_project_file()
+    let l:project_ctags = gutentags#get_project_root(getcwd())
+    return strpart(substitute(l:project_ctags, "/", "-", "g"), 1) . '-tags'
+endfunction
+:execute 'set tags=' . ctags_cache . Ctags_project_file()
 
 " FZF
 let g:fzf_layout = { 'down': '30%' }
