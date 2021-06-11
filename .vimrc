@@ -43,6 +43,7 @@ set number
 set title
 set ruler
 set nospell
+set hlsearch
 
 " Color theme
 sy on
