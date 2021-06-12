@@ -7,16 +7,12 @@ endif
 
 " Load plugins
 call plug#begin('~/.vim/plugged')
-Plug 'Shougo/deoplete.nvim'
-Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'scrooloose/nerdtree'
-Plug 'roxma/nvim-yarp'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'tpope/vim-sensible'
 Plug 'mhinz/vim-signify'
 Plug 'sukima/xmledit'
@@ -87,9 +83,6 @@ let NERDTreeIgnore+=['.*\.so$', '.*\.a$']
 let NERDTreeIgnore+=['.*\.pyc$']
 let NERDTreeIgnore+=['.*\.class$']
 
-" Bufexplorer options
-let g:bufExplorerSplitBelow=1
-
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
@@ -106,10 +99,7 @@ let g:airline_symbols.linenr = '␤ '
 let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.paste = 'ρ'
 
-" Deoplete (autocompletion)
-set pyxversion=3
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#disable_auto_complete = 1
+" Autocomplete configuration
 set completeopt-=preview
 set completeopt+=noinsert,longest,menuone
 if has("patch-7.4.314")
@@ -117,11 +107,9 @@ if has("patch-7.4.314")
 endif
 " Close the preview window after completion
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
 " Enter just selects the item in the autocomplete menu
 " http://vim.wikia.com/wiki/VimTip1386
 :inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
 " Map Ctrl+Space to autocomplete
 " https://coderwall.com/p/cl6cpq/vim-ctrl-space-omni-keyword-completion
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
@@ -206,7 +194,7 @@ autocmd FileType help nnoremap <buffer> s /\|\zs\S\+\ze\|<CR>
 autocmd FileType help nnoremap <buffer> S ?\|\zs\S\+\ze\|<CR>
 
 " Automatic commands
-autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py,*.go NERDTree
+"autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py,*.go NERDTree
 autocmd FileType c,cpp,h,java,python,go nested :TagbarOpen
 
 " QuickFix window always at the bottom

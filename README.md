@@ -27,7 +27,7 @@ source .bashrc
 
 * File explorer and quick search.
 * Language objects information such as classes, methods, variables, etc.
-* Code completion.
+* Code completion for Go.
 * Integrated Git status information.
 * Easy buffer navigation between open files.
 * Integrated terminal.
@@ -54,9 +54,6 @@ There is no automatic way to install this, but only a few links need to be creat
 You can install all the plugins and create the links as follows:
 
 ```bash
-# Install Neovim python3 support
-pip3 install neovim
-
 # Clone the repo
 git clone https://github.com/nacx/dotfiles.git
 
