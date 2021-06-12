@@ -44,6 +44,7 @@ set title
 set ruler
 set nospell
 set hlsearch
+set exrc
 
 " Color theme
 sy on
@@ -159,6 +160,7 @@ let g:fzf_layout = { 'down': '30%' }
 :nnoremap sc :Commits<CR>
 
 " Go
+let g:go_fmt_command = "goimports"
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
@@ -215,5 +217,7 @@ autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 
 " Autoload changes in .vimrc
-autocmd BufWritePost .vimrc source $MYVIMRC
+" Commented because for some reason, when this is set vim always leaves
+" the .vimrc.swp file without deleting it
+"autocmd BufWritePost .vimrc source $MYVIMRC
 
