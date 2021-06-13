@@ -101,7 +101,7 @@ let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.paste = 'ρ'
 
 " Autocomplete configuration
-set completeopt-=preview
+"set completeopt-=preview
 set completeopt+=noinsert,longest,menuone
 if has("patch-7.4.314")
     set shortmess+=c
