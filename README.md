@@ -27,7 +27,8 @@ source .bashrc
 
 * File explorer and quick search.
 * Language objects information such as classes, methods, variables, etc.
-* Code completion for Go.
+* Code completion.
+* Highlight compilation and lint error on the fly.
 * Integrated Git status information.
 * Easy buffer navigation between open files.
 * Integrated terminal.
@@ -41,7 +42,6 @@ In order to use the Vim plugins the following pieces have to be installed manual
 * curl
 * Git
 * Exuberant ctags >= 5.5
-* Python3 and its development libraries
 * tmux *(only if you are using the integrated terminal)*
 
 If you are using OSX, you will need to install Vim with [Homebrew](https://brew.sh/).

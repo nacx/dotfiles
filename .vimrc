@@ -21,6 +21,7 @@ Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " Use :help <option> to see the docs
