@@ -11,7 +11,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'Townk/vim-autoclose'
-Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'tpope/vim-sensible'
 Plug 'mhinz/vim-signify'
