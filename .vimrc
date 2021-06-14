@@ -42,7 +42,6 @@ set ruler
 set nospell
 set hlsearch
 set exrc
-set paste
 
 " Color theme
 sy on
