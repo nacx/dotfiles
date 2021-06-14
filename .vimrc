@@ -42,11 +42,14 @@ set ruler
 set nospell
 set hlsearch
 set exrc
+set paste
 
 " Color theme
 sy on
 set t_Co=256
 colorscheme tender
+source ~/src/dotfiles/.vim/colors/nacx-tender.vim
+
 " Override the highlight color so it shows better in nerdtree with high
 " contrast
 hi CursorLine guibg=#444444 gui=bold ctermbg=237 cterm=none
