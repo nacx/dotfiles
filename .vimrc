@@ -87,7 +87,8 @@ let NERDTreeIgnore+=['.*\.class$']
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = '»'
+let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#left_alt_sep = '»'
 let g:airline_exclude_preview = 1
 let g:airline_left_sep = '▶'
 let g:airline_left_alt_sep = '»'
@@ -180,7 +181,9 @@ if &term =~ '^screen'
 endif
 
 " Close tmux when exiting vim
-autocmd VimLeave * silent !tmux kill-session -t $VIM_SESSION
+if exists('$TMUX')
+    autocmd VimLeave * silent !tmux kill-session -t $VIM_SESSION
+endif
 
 " Custom file types
 au BufRead,BufNewFile *.md set filetype=markdown
