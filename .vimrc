@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'majutsushi/tagbar'
+Plug 'preservim/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'Townk/vim-autoclose'
@@ -79,6 +79,7 @@ let NERDTreeAutoCenter = 1
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeHighlightCursorline = 1
 let NERDTreeMouseMode = 1
+let NERDTreeWinSize = winwidth(0) / 8
 "let NERDTreeDirArrows = 1
 let NERDTreeIgnore=['.*\.o$']
 let NERDTreeIgnore+=['.*\~$']
@@ -131,6 +132,23 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
             \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
             \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
+
+" Tagbar
+let g:tagbar_width = max([40, winwidth(0)/5])   " 20% of the screen witha minimum of 40
+let g:tagbar_type_proto = {
+    \ 'ctagstype': 'Protobuf',
+    \ 'kinds': [
+        \ 'p:packages:0:0',
+        \ 'm:messages:0:0',
+        \ 'f:fields:0;0',
+        \ 'e:enum constants:0:0',
+        \ 'g:enum types:0:0',
+        \ 's:services:0:0'
+    \ ],
+    \ 'sro': '.',
+    \ 'kind2scope': {'m': 'message', 'p': 'package'},
+    \ 'scope2kind': {'message': 'm', 'package': 'p'}
+\ }
 
 " Gutentag
 let g:gutentags_add_default_project_roots = 0
@@ -210,7 +228,7 @@ autocmd FileType help nnoremap <buffer> S ?\|\zs\S\+\ze\|<CR>
 
 " Automatic commands
 "autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py,*.go NERDTree
-autocmd FileType c,cpp,h,java,python,go nested :TagbarOpen
+autocmd FileType c,cpp,h,java,python,go,proto nested :TagbarOpen
 
 " QuickFix window always at the bottom
 autocmd FileType qf wincmd J
