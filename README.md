@@ -41,7 +41,7 @@ In order to use the Vim plugins the following pieces have to be installed manual
 
 * curl
 * Git
-* Exuberant ctags >= 5.5
+* [Universal ctags](https://ctags.io/)
 * tmux *(only if you are using the integrated terminal)*
 
 If you are using OSX, you will need to install Vim with [Homebrew](https://brew.sh/).
