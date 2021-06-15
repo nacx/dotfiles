@@ -186,6 +186,9 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
 let g:go_doc_popup_window = 1
+:nnoremap gb :GoBuild!<CR>
+:nnoremap gt :GoTest!<CR>
+:nnoremap gtf :GoTestFunc!<CR>
 :nnoremap gdoc :GoDoc<CR>
 :nnoremap gs :GoInfo<CR>
 :nnoremap gdb :GoDebugBreakpoint<CR>
