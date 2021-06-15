@@ -92,7 +92,7 @@ let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-let g:NERDTreePatternMatchHighlightColor = {'.*\.pb.*\.go$': '949494'}
+let g:NERDTreePatternMatchHighlightColor = {'.*\.pb.*\.go$': '949494', '.*\.gen\.go': '949494'}
 let g:NERDTreeExactMatchHighlightColor = {'gen.warnings': '949494'}
 
 " Airline
