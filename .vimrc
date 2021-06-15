@@ -234,6 +234,7 @@ autocmd FileType c,cpp,h,java,python,go,proto nested :TagbarOpen
 autocmd FileType qf wincmd J
 
 " Two space indent in Ruby
+autocmd Filetype proto setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 
