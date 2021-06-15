@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'Townk/vim-autoclose'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -45,7 +46,7 @@ set exrc
 
 " Color theme
 sy on
-set t_Co=256
+"set t_Co=256
 colorscheme tender
 source ~/src/dotfiles/.vim/colors/nacx-tender.vim
 
@@ -96,8 +97,8 @@ let g:NERDTreeExactMatchHighlightColor = {'gen.warnings': '949494'}
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#left_sep = ''
+" let g:airline#extensions#tabline#left_alt_sep = '|'
 "let g:airline#extensions#tabline#left_alt_sep = '»'
 let g:airline_exclude_preview = 1
 let g:airline_left_sep = '▶'
@@ -107,9 +108,9 @@ let g:airline_right_alt_sep = '«'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-let g:airline_symbols.linenr = '␤ '
-let g:airline_symbols.branch = '⎇ '
-let g:airline_symbols.paste = 'ρ'
+" let g:airline_symbols.linenr = '␤ '
+" let g:airline_symbols.branch = '⎇ '
+" let g:airline_symbols.paste = 'ρ'
 
 " Autocomplete configuration
 "set completeopt-=preview
