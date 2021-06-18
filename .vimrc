@@ -43,7 +43,6 @@ set ruler
 set nospell
 set hlsearch
 set exrc
-set termwinsize=5*0
 set splitbelow
 
 " Color theme
