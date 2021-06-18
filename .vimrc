@@ -49,7 +49,7 @@ set splitbelow
 sy on
 "set t_Co=256
 colorscheme tender
-source ~/src/dotfiles/.vim/colors/nacx-tender.vim
+source ~/.vim/colors/nacx-tender.vim
 
 " Override the highlight color so it shows better in nerdtree with high
 " contrast

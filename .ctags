@@ -2,3 +2,6 @@
 --exclude=.git
 --exclude=.svn
 --exclude=node_modules/*
+--exclude=.cache
+--exclude=.yarn
+
