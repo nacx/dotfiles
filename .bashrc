@@ -97,18 +97,6 @@ function git-withbr() {
     git submodule --quiet foreach "${CMD}"
 }
 
-# Open Vim with tmux
-function vim_tmux() {
-    VIM_SESSION="vim-${RANDOM}"
-    tmux new -s ${VIM_SESSION} -d "VIM_SESSION=${VIM_SESSION} vim $*" \; attach;
-}
-alias vim='vim_tmux'
-
-# Set a tmux friendly terminal terminal
-if [[ "$TERM" == "xterm" ]]; then
-    TERM=xterm-256color
-fi
-
 # Easily change to Go package source directories (e.g. gocd .../policy)
 function gocd() { cd `go list -f '{{.Dir}}' $1`; }
 

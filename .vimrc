@@ -43,6 +43,8 @@ set ruler
 set nospell
 set hlsearch
 set exrc
+set termwinsize=5*0
+set splitbelow
 
 " Color theme
 sy on
@@ -57,7 +59,7 @@ hi CursorLine guibg=#444444 gui=bold ctermbg=237 cterm=none
 " Key remaps
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :TagbarToggle<CR>
-nmap <silent> <F4> :!tmux splitw -v -l 5<CR><CR>
+nmap <F4> :term<CR>
 nmap f :NERDTreeFind<CR>
 
 " Use fancy buffer closing that doesn't close the split
@@ -202,20 +204,6 @@ let g:go_debug_windows = {
     \ 'goroutines': 'leftabove vnew',
     \ 'out':        'botright 5new',
 \ }
-
-" Tmux integration
-if &term =~ '^screen'
-    " tmux will send xterm-style keys when xterm-keys is on
-    execute "set <xUp>=\e[1;*A"
-    execute "set <xDown>=\e[1;*B"
-    execute "set <xRight>=\e[1;*C"
-    execute "set <xLeft>=\e[1;*D"
-endif
-
-" Close tmux when exiting vim
-if exists('$TMUX')
-    autocmd VimLeave * silent !tmux kill-session -t $VIM_SESSION
-endif
 
 " Custom file types
 au BufRead,BufNewFile *.md set filetype=markdown

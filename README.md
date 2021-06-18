@@ -42,7 +42,6 @@ In order to use the Vim plugins the following pieces have to be installed manual
 * curl
 * Git
 * [Universal ctags](https://ctags.io/)
-* tmux *(only if you are using the integrated terminal)*
 
 If you are using OSX, you will need to install Vim with [Homebrew](https://brew.sh/).
 Otherwise auto-completion will not work since the version of Vim that comes by default
@@ -78,28 +77,6 @@ $ brew link --overwrite python@3.8 --force
 ```
 
 Once the links have been created you're done! All the plugins will be automatically installed the first time you open Vim.
-
-### Integrated terminal
-
-If you want to use the integrated terminal `tmux` needs to be installed. You can use the provided `tmux`
-configuration by creating the corresponding symlink:
-
-```bash
-# Create the symbolic for the tmux configuration
-cd ~
-ln -s dotfiles/.tmux.conf
-```
-
-In order to easily open Vim in a `tmux` session that allows you to open the console, add the following lines to the *.barhrc* file:
-
-```bash
-# Open Vim with tmux
-function vim_tmux() {
-    VIM_SESSION="vim-${RANDOM}"
-    tmux new -s ${VIM_SESSION} -d "VIM_SESSION=${VIM_SESSION} vim $*" \; attach;
-}
-alias vim='vim_tmux'
-```
 
 ### Usage cheat sheet
 
