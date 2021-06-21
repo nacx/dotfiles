@@ -23,6 +23,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'dense-analysis/ale'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 " Use :help <option> to see the docs
@@ -58,8 +59,10 @@ hi CursorLine guibg=#444444 gui=bold ctermbg=237 cterm=none
 " Key remaps
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :TagbarToggle<CR>
-nmap <F4> :term<CR>
+nnoremap <silent> <F4> :FloatermToggle<CR>
+tnoremap <silent> <F4> <C-\><C-n>:FloatermToggle<CR>
 nmap f :NERDTreeFind<CR>
+
 
 " Use fancy buffer closing that doesn't close the split
 :nnoremap <silent> <S-Left> :bprevious<CR>
@@ -203,6 +206,12 @@ let g:go_debug_windows = {
     \ 'goroutines': 'leftabove vnew',
     \ 'out':        'botright 5new',
 \ }
+
+" Floaterm
+let g:floaterm_wintype = 'split'
+let g:floaterm_position = 'botright'
+let g:floaterm_height = 0.2
+let g:floaterm_autoclose = 2  " Always close when done
 
 " Custom file types
 au BufRead,BufNewFile *.md set filetype=markdown
