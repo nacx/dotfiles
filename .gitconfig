@@ -48,3 +48,5 @@
 	version = 2
 [commit]
 	gpgSign = true
+[pull]
+	rebase = false

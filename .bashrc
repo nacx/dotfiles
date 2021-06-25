@@ -32,6 +32,7 @@ if [[ -f ${POLYGLOT} ]]; then
     [[ -f ${POLYGLOT_KUBE} ]] && source ${POLYGLOT_KUBE}
 fi
 
+export KUBECTX_IGNORE_FZF=true
 export KUBE_PS1_SYMBOL_ENABLE=true
 export KUBE_PS1_CTX_COLOR=yellow
 
@@ -39,7 +40,7 @@ export KUBE_PS1_CTX_COLOR=yellow
 source ${CWD}/.git-completion.sh
 
 # Environment variables
-export EDITOR=vim
+export EDITOR=vi
 
 # Aliases
 alias ls='ls -G'
