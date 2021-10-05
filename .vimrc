@@ -45,6 +45,8 @@ set nospell
 set hlsearch
 set exrc
 set splitbelow
+" Configure how to display special characters when using ':set list'
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 " Color theme
 sy on
@@ -214,7 +216,7 @@ let g:floaterm_height = 0.2
 let g:floaterm_autoclose = 2  " Always close when done
 
 " Custom file types
-au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.md,*.mdx set filetype=markdown
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
 " Better help navigation

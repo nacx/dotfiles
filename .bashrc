@@ -41,6 +41,7 @@ source ${CWD}/.git-completion.sh
 
 # Environment variables
 export EDITOR=vi
+export GPG_TTY=$(tty)
 
 # Aliases
 alias ls='ls -G'
