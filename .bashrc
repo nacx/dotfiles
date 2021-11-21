@@ -5,7 +5,6 @@ BREW_PREFIX=$(brew --prefix)
 # Kubernetes
 KC=(~/.kube/config-*)
 IFS=: eval 'export KUBECONFIG=${KC[*]}'
-#KUBE_PS1=$(brew list -1 kube-ps1 | grep '.sh$')
 KUBE_PS1=${BREW_PREFIX}/share/kube-ps1.sh
 if [[ -r ${KUBE_PS1} ]]; then
     source ${KUBE_PS1}
