@@ -1,24 +1,29 @@
 CWD=$(dirname ${BASH_SOURCE[0]})
 
-BREW_PREFIX=$(brew --prefix)
+hash kubectl 2>/dev/null
+HAS_K8S=$?
 
-# Kubernetes
-KC=(~/.kube/config-*)
-IFS=: eval 'export KUBECONFIG=${KC[*]}'
-KUBE_PS1=${BREW_PREFIX}/share/kube-ps1.sh
-if [[ -r ${KUBE_PS1} ]]; then
-    source ${KUBE_PS1}
-    kubeoff
-fi
+if [[ ${HAS_K8S} -eq 0 ]]; then
+    BREW_PREFIX=$(brew --prefix)
 
-source <(kubectl completion bash)
-if [[ $(type -t compopt) = "builtin" ]]; then
-    complete -o default -F __start_kubectl k
-else
-    complete -o default -o nospace -F __start_kubectl k
-fi
-if [ -f ${BREW_PREFIX}/etc/bash_completion ]; then
-    . ${BREW_PREFIX}/etc/bash_completion
+    # Kubernetes
+    KC=(~/.kube/config-*)
+    IFS=: eval 'export KUBECONFIG=${KC[*]}'
+    KUBE_PS1=${BREW_PREFIX}/share/kube-ps1.sh
+    if [[ -r ${KUBE_PS1} ]]; then
+        source ${KUBE_PS1}
+        kubeoff
+    fi
+
+    source <(kubectl completion bash)
+    if [[ $(type -t compopt) = "builtin" ]]; then
+        complete -o default -F __start_kubectl k
+    else
+        complete -o default -o nospace -F __start_kubectl k
+    fi
+    if [ -f ${BREW_PREFIX}/etc/bash_completion ]; then
+        . ${BREW_PREFIX}/etc/bash_completion
+    fi
 fi
 
 # Polyglot prompt (needs to go after kube-ps1 is loaded)
@@ -27,8 +32,10 @@ if [[ -f ${POLYGLOT} ]]; then
     source ${POLYGLOT}
     bind 'set show-mode-in-prompt off'
 
-    POLYGLOT_KUBE=${CWD}/addons/polyglot-kube-ps1/polyglot-kube-ps1.sh
-    [[ -f ${POLYGLOT_KUBE} ]] && source ${POLYGLOT_KUBE}
+    if [[ ${HAS_K8S} -eq 0 ]]; then
+        POLYGLOT_KUBE=${CWD}/addons/polyglot-kube-ps1/polyglot-kube-ps1.sh
+        [[ -f ${POLYGLOT_KUBE} ]] && source ${POLYGLOT_KUBE}
+    fi
 fi
 
 export KUBECTX_IGNORE_FZF=true
