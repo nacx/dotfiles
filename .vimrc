@@ -228,8 +228,8 @@ autocmd FileType help nnoremap <buffer> s /\|\zs\S\+\ze\|<CR>
 autocmd FileType help nnoremap <buffer> S ?\|\zs\S\+\ze\|<CR>
 
 " Automatic commands
-"autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py,*.go NERDTree
-autocmd FileType c,cpp,h,java,python,go,proto nested :TagbarOpen
+" autocmd VimEnter *.c,*.cpp,*.h,*.java,*.py,*.go NERDTree
+" autocmd FileType c,cpp,h,java,python,go,proto nested :TagbarOpen
 
 " QuickFix window always at the bottom
 autocmd FileType qf wincmd J
