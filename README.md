@@ -104,7 +104,7 @@ The configuration comes with some Go shortcuts and additional customimzations to
 | **gs** | Shows the signature of the method under the cursor in the status bar |
 | **gdb** | Toggle a breakpoint in the current line |
 | **gdr** | Run the program while debugging until the next breakpoint |
-| **gdn** | Advance to the enxt line when debugging |
+| **gdn** | Advance to the next line when debugging |
 | **gdi** | Step into the current function |
 | **gdo** | Step out of the current function |
 
