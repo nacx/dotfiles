@@ -183,6 +183,14 @@ let g:fzf_layout = { 'down': '30%' }
 :nnoremap sb :Buffers<CR>
 :nnoremap st :Tags<CR>
 :nnoremap sc :Commits<CR>
+command! -bang -nargs=* GrepFiles
+  \ call fzf#vim#grep(
+  \   'git grep --line-number -- '.shellescape(<q-args>), 0,
+  \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
+command! -bang -nargs=* GrepFilesIgnoreCase
+  \ call fzf#vim#grep(
+  \   'git grep --line-number -i -- '.shellescape(<q-args>), 0,
+  \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
 " Go
 let g:go_fmt_command = "goimports"
