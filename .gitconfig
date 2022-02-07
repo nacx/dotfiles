@@ -6,6 +6,7 @@
 [core]
     editor = vim
     autocrlf = input
+    excludesfile = /Users/nacx/.gitignore
 
 [color]
     status = auto
