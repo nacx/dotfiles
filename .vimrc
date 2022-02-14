@@ -140,7 +140,7 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 imap <C-@> <C-Space>
 
 " Tagbar
-let g:tagbar_width = max([40, winwidth(0)/5])   " 20% of the screen witha minimum of 40
+let g:tagbar_width = max([40, winwidth(0)/5])   " 20% of the screen with a minimum of 40
 let g:tagbar_type_proto = {
     \ 'ctagstype': 'Protobuf',
     \ 'kinds': [
