@@ -7,7 +7,7 @@ if [[ ${HAS_K8S} -eq 0 ]]; then
     BREW_PREFIX=$(brew --prefix)
 
     # Kubernetes
-    KC=(~/.kube/config-*)
+    KC=(~/.kube/config*)
     IFS=: eval 'export KUBECONFIG=${KC[*]}'
     KUBE_PS1=${BREW_PREFIX}/share/kube-ps1.sh
     if [[ -r ${KUBE_PS1} ]]; then
@@ -41,6 +41,7 @@ fi
 export KUBECTX_IGNORE_FZF=true
 export KUBE_PS1_SYMBOL_ENABLE=true
 export KUBE_PS1_CTX_COLOR=yellow
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # Git completion
 source ${CWD}/.git-completion.sh
@@ -72,7 +73,7 @@ alias k='kubectl'
 alias ki='kubectl -n istio-system'
 alias kctx='kubectx'
 alias kns='kubens'
-alias mixl='kubectl -n istio-system logs $(kubectl -n istio-system get pods -lapp=policy -o jsonpath="{.items[0].metadata.name}") -c mixer -f'
+alias kshell='kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash'
 
 alias tf='terraform'
 

@@ -1,6 +1,6 @@
 [user]
     name = Ignasi Barrera
-    email = nacx@apache.org
+	email = ignasi@tetrate.io
     signingkey = D959B94F
 
 [core]
@@ -51,3 +51,8 @@
 	gpgSign = true
 [pull]
 	rebase = false
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
