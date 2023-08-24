@@ -71,6 +71,7 @@ alias mvnci='mvn clean install'
 
 alias k='kubectl'
 alias ki='kubectl -n istio-system'
+alias kc='kubectl --kubeconfig'
 alias kctx='kubectx'
 alias kns='kubens'
 alias kshell='kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash'

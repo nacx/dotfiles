@@ -59,3 +59,7 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[safe]
+	directory = /work
