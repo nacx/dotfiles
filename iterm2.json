@@ -1757,6 +1757,7 @@
   },
   "Window Type" : 0,
   "Blur Radius" : 9.5373587101063837,
+  "Cursor Boost" : 0,
   "Background Image Location" : "",
   "Blur" : true,
   "Badge Color" : {
@@ -2508,6 +2509,7 @@
   },
   "Window Type" : 0,
   "Blur Radius" : 10.226487699468086,
+  "Cursor Boost" : 0,
   "Background Image Location" : "",
   "Blur" : true,
   "Badge Color" : {
@@ -2517,6 +2519,7 @@
     "Alpha Component" : 0.5,
     "Green Component" : 0.1491314172744751
   },
+  "Cursor Type" : 2,
   "Scrollback Lines" : 1000,
   "Send Code When Idle" : false,
   "Close Sessions On End" : true,
