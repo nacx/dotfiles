@@ -84,6 +84,9 @@ function kctxd() {
 
 alias tf='terraform'
 
+# Decode JWT tokens
+alias jwtd="jq -R 'split(\".\") | .[0],.[1] | @base64d | fromjson'"
+
 function gitgomod() {
     TZ=UTC git --no-pager show --quiet --abbrev=12 --date='format-local:%Y%m%d%H%M%S' --format="%cd-%h"
 }
