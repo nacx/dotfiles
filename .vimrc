@@ -24,6 +24,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'dense-analysis/ale'
 Plug 'voldikss/vim-floaterm'
+Plug 'github/copilot.vim'
 call plug#end()
 
 " Use :help <option> to see the docs

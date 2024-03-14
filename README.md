@@ -28,6 +28,7 @@ source .bashrc
 * File explorer and quick search.
 * Language objects information such as classes, methods, variables, etc.
 * Code completion.
+* GitHub Copilot integration.
 * Highlight compilation and lint error on the fly.
 * Integrated Git status information.
 * Easy buffer navigation between open files.
@@ -62,6 +63,9 @@ ln -s dotfiles/.vimrc
 ln -s dotfiles/.vim
 ln -s dotfiles/.ctags
 ```
+
+The first time you open Vim, the plugins will be installed automatically. Once the plugins are installed, you can
+configure the GitHub Copilot plugin by running: `:Copilot setup`.
 
 ### Upgrading Python with Homebrew
 
