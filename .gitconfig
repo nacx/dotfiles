@@ -1,7 +1,13 @@
 [user]
     name = Ignasi Barrera
-	email = ignasi@tetrate.io
+    email = nacx@apache.org
     signingkey = D959B94F
+
+[includeIf "hasconfig:remote.*.url:*tetrate*/**"]
+    path = /Users/nacx/src/dotfiles/.gitconfig-tetrate
+
+[includeIf "hasconfig:remote.*.url:*istio*/**"]
+    path = /Users/nacx/src/dotfiles/.gitconfig-tetrate
 
 [core]
     editor = vim
@@ -45,21 +51,19 @@
     insteadOf = https://github.com/
 
 [protocol]
-	version = 2
+    version = 2
 
 [commit]
-	gpgSign = true
+    gpgSign = true
 
 [pull]
-	rebase = false
+    rebase = false
 
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
 
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
-[safe]
-	directory = /work
+    insteadOf = https://github.com/
