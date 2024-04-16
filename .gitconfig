@@ -4,10 +4,10 @@
     signingkey = D959B94F
 
 [includeIf "hasconfig:remote.*.url:*tetrate*/**"]
-    path = /Users/nacx/src/dotfiles/.gitconfig-tetrate
+    path = .gitconfig-tetrate
 
 [includeIf "hasconfig:remote.*.url:*istio*/**"]
-    path = /Users/nacx/src/dotfiles/.gitconfig-tetrate
+    path = .gitconfig-tetrate
 
 [core]
     editor = vim
