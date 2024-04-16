@@ -24,8 +24,7 @@
 [alias]
     st = status
     ci = commit
-    cs = commit -S
-    css = commit -S --signoff
+    cs = commit -S -s
     ms = merge -S
     cp = cherry-pick
     cps = cherry-pick -S
