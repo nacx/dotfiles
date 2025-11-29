@@ -1,9 +1,13 @@
 {
     "[markdown]": {},
-    "[python]": {},
+    "[python]": {
+        "editor.formatOnType": true
+    },
     "extensions.ignoreRecommendations": false,
-    "workbench.colorTheme": "Darcula Theme from IntelliJ",
     "[proto3]": {
+        "editor.tabSize": 2
+    },
+    "[terraform]": {
         "editor.tabSize": 2
     },
     "workbench.iconTheme": "material-icon-theme",
@@ -18,8 +22,9 @@
         "sideBar.background": "#363636",
         "editor.background": "#2A2B2A",
         "list.activeSelectionBackground": "#474747",
-        "list.inactiveSelectionBackground": "#474747"
+        "list.inactiveSelectionBackground": "#474747",
     },
+    "editor.links": false,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -47,16 +52,22 @@
                 }
             },
             {
-                "scope": "keyword.operator",
+                "scope": [
+                    "keyword.operator",
+                    "entity.name.type.go"
+                ],
                 "settings": {
-                    "foreground": "#93A5BA"
+                    "foreground": "#b1c3d7"
                 }
             },
             {
-                "name": "User-defined constant",
-                "scope": [
+               "scope": [
+                    "constant",
+                    "constant.numeric",
                     "constant.character",
-                    "constant.other"
+                    "constant.other",
+                    "variable.other.constant",
+                    "meta.preprocessor.macro"
                 ],
                 "settings": {
                     "foreground": "#CECCAF"
@@ -64,22 +75,20 @@
             },
             {
                 "scope": [
-                    "variable"
+                    "variable",
+                    "variable.parameter",
+                    "variable.other.property"
                 ],
                 "settings": {
-                    "foreground": "#e9adbf"
+                    "foreground": "#c7c6c6"
                 }
-            }
+            },
         ]
     },
     "git.enableSmartCommit": true,
-    "window.zoomLevel": 0,
-    "breadcrumbs.enabled": true,
     "editor.suggest.localityBonus": true,
     "editor.multiCursorModifier": "alt",
-    "java.home": "~/.jenv/versions/1.8.0.211",
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "files.exclude": {
         ".idea": true,
         ".vscode": true,
@@ -89,24 +98,44 @@
         "**/.settings": true
     },
     "go.useLanguageServer": true,
-    "go.goroot": "/usr/local/opt/go/libexec",
-    "go.autocompleteUnimportedPackages": true,
     "go.formatTool": "goimports",
     "go.formatFlags": ["-local", "github.com/tetrateio/tetrate"],
-    "go.liveErrors": {
-        "enabled": false,
-        "delay": 500
+    "go.toolsManagement.autoUpdate": true,
+    "editor.largeFileOptimizations": false,
+    "terraform.languageServer.enable": true,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": false,
+    "editor.fontSize": 14,
+    "workbench.editor.empty.hint": "hidden",
+    "highlight-bad-chars.additionalUnicodeChars": [
+        "\u0000",
+        "\u001f"
+    ],
+    "editor.minimap.enabled": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "terraform.indexing": {
-        "enabled": false,
-        "liveIndexing": false,
-        "delay": 500,
-        "exclude": [
-            ".terraform/**/*",
-            "**/.terraform/**/*"
-        ]
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "terraform.languageServer": {
-        "external": true
-    }
+    "editor.language.colorizedBracketPairs": [],
+    "workbench.colorTheme": "Darcula Theme from IntelliJ",
+    "go.alternateTools": {
+        "dlv": "/opt/homebrew/bin/dlv"
+    },
+    "redhat.telemetry.enabled": false,
+    "window.nativeTabs": true,
+    "window.systemColorTheme": "auto",
+    "docker.extension.enableComposeLanguageServer": false
 }

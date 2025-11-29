@@ -91,3 +91,8 @@ function gitgomod() {
     TZ=UTC git --no-pager show --quiet --abbrev=12 --date='format-local:%Y%m%d%H%M%S' --format="%cd-%h"
 }
 
+# Funciton to checkout a PR from a remote GitHub repo
+function gpr() {
+  git fetch $1 "pull/$2/head:pr-$2" && git checkout "pr-$2"
+}
+

@@ -25,6 +25,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'dense-analysis/ale'
 Plug 'voldikss/vim-floaterm'
 Plug 'github/copilot.vim'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " Use :help <option> to see the docs
