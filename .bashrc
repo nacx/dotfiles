@@ -81,6 +81,8 @@ function kctxd() {
     kubectl config delete-cluster ${1}
 }
 
+# Create the aliases for each Go version
+for g in /opt/homebrew/opt/go@*; do alias $(basename $g)=$g/bin/go ; done
 
 alias tf='terraform'
 
