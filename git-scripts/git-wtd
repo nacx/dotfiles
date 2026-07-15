@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: git wtd <branch>" >&2
+    exit 1
+fi
+
+WORKTREE_BASE_PATH=${HOME}/src/git-worktrees
+
+branch="${1}"
+
+root=$(git rev-parse --show-toplevel)
+repo=$(basename "${root}")
+
+new="${WORKTREE_BASE_PATH}/${repo}-${branch}"
+old="${WORKTREE_BASE_PATH}/${branch}"
+
+if [[ -d "${new}" ]]; then
+    git worktree remove "${new}"
+    git branch -D "${branch}"
+elif [[ -d "${old}" ]]; then
+    git worktree remove "${old}"
+    git branch -D "${branch}"
+else
+    echo "No worktree found at:"
+    echo "  ${new}"
+    echo "  ${old}"
+    exit 1
+fi

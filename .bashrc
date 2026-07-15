@@ -45,6 +45,8 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # Git completion
 source ${CWD}/.git-completion.sh
+# Make the git-scripts directory available in the PATH so that git can find them
+export PATH=$PATH:$CWD/git-scripts
 
 # Environment variables
 export EDITOR=vi

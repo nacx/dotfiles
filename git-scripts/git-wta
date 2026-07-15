@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: git wtd <branch>" >&2
+    exit 1
+fi
+
+WORKTREE_BASE_PATH=${HOME}/src/git-worktrees
+
+branch="${1}"
+
+root=$(git rev-parse --show-toplevel)
+repo=$(basename "${root}")
+
+git worktree add \
+    -b "${branch}" \
+    "${WORKTREE_BASE_PATH}/${repo}-${branch}"

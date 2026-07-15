@@ -9,6 +9,9 @@
 [includeIf "hasconfig:remote.*.url:*istio*/**"]
     path = .gitconfig-tetrate
 
+[includeIf "hasconfig:remote.*.url:*envoyproxy*/**"]
+    path = .gitconfig-tetrate
+
 [core]
     editor = vim
     autocrlf = input
@@ -36,9 +39,8 @@
     br = branch
     lg = log --graph
     lgs = log --graph --show-signature
-	wta = "!f() { git worktree add -b \"$1\" \"../$1\"; }; f"
-	wtr = "!f() { git worktree remove \"../$1\"; }; f"
-	wtl = "!f() { git worktree list; }; f"
+    ; "wta" and "wtd" are git scripts in the git-scripts directory that is in the PATH
+    wtl = "!f() { git worktree list; }; f"
 
 [gpg]
     program = gpg
