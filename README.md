@@ -20,7 +20,7 @@ git submodule update --init
 source .bashrc
 ```
 
-<a href="https://github.com/nacx/dotfiles/raw/master/img/shell.png"><img src="https://github.com/nacx/dotfiles/raw/master/img/shell.png" height="400"/></a>
+<a href="https://github.com/nacx/dotfiles/raw/main/img/shell.png"><img src="https://github.com/nacx/dotfiles/raw/main/img/shell.png" height="400"/></a>
 
 
 ## Vim features
@@ -34,7 +34,7 @@ source .bashrc
 * Easy buffer navigation between open files.
 * Integrated terminal.
 
-[![vim](img/vim.png)](https://github.com/nacx/dotfiles/raw/master/img/vim.png)
+[![vim](img/vim.png)](https://github.com/nacx/dotfiles/raw/main/img/vim.png)
 
 ### Prerequisites
 
@@ -112,5 +112,5 @@ The configuration comes with some Go shortcuts and additional customimzations to
 | **gdi** | Step into the current function |
 | **gdo** | Step out of the current function |
 
-<a href="https://github.com/nacx/dotfiles/raw/master/img/godebug.png"><img src="https://github.com/nacx/dotfiles/raw/master/img/godebug.png" height="400"/></a>
+<a href="https://github.com/nacx/dotfiles/raw/main/img/godebug.png"><img src="https://github.com/nacx/dotfiles/raw/main/img/godebug.png" height="400"/></a>
 
