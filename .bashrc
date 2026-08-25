@@ -7,8 +7,12 @@ if [[ ${HAS_K8S} -eq 0 ]]; then
     BREW_PREFIX=$(brew --prefix)
 
     # Kubernetes
+    shopt -s nullglob
     KC=(~/.kube/config*)
-    IFS=: eval 'export KUBECONFIG=${KC[*]}'
+    shopt -u nullglob
+    if [[ ${#KC[@]} -gt 0 ]]; then
+        IFS=: eval 'export KUBECONFIG=${KC[*]}'
+    fi
     KUBE_PS1=${BREW_PREFIX}/share/kube-ps1.sh
     if [[ -r ${KUBE_PS1} ]]; then
         source ${KUBE_PS1}
